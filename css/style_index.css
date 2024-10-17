@@ -8,11 +8,20 @@ body {
   margin: 0;
   padding: 0;
   background-color: black;
-  background-image: url(../assets/imgs/bg-anfield-dark.png);
-  background-size: cover;
+  /* background-image: url(../assets/imgs/bg-anfield-dark.png); */
+  /* background-size: cover; */
   color: white;
   font-family: Poppins;
   user-select: none;
+}
+
+.bg {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../assets/imgs/bg-anfield-dark.png);
+  background-size: cover;
+  position: fixed;
+  z-index: -99;
 }
 
 main {
@@ -56,6 +65,10 @@ header h1 {
   font-weight: normal;
 }
 
+header figure h1 span {
+  color: crimson;
+}
+
 nav {
   display: flex;
   /* border: yellow solid; */
@@ -81,36 +94,86 @@ section {
   /* border: solid red; */
   padding: 0;
   margin: 0;
-  height: 70vh;
+  height: 55vh;
+  justify-content: space-between;
+  align-items: flex-end;
+  /* padding-bottom: 3rem; */
 }
 
 .slogan {
   display: flex;
   /* border: blue solid; */
-  width: 50%;
+  width: 49%;
   align-items: center;
   /* background-color: black; */
+}
+
+.slogan span {
+  color: crimson;
 }
 
 .slogan h1 {
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 12px;
   height: fit-content;
-  display: flex;
+  /* display: flex; */
   margin: 0;
-  padding: 0;
+  /* padding: 0; */
   /* border: purple solid; */
-  font-size: 90px;
-  font-family: "Albertus Medium", Poppins, Arial, Helvetica, sans-serif;
+  font-size: 75px;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
   align-items: center;
-  padding: 5rem;
+  padding: 2rem 3rem;
 }
 
-section figure {
+
+.apresentacao {
   display: flex;
-  padding: 0;
-  margin: 0;
-  /* border: yellow solid; */
-  width: 50%;
+  /* border: solid red;   */
+  width: 49%;
+  justify-content: end;
   align-items: center;
+}
+
+iframe {
+  height: 45vh;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 10px black;
+}
+
+.infos {
+  /* border: solid purple; */
+  width: 100%;
+  height: 45vh;
+} 
+
+.info {
+  /* border: solid blue; */
+  height: 100%;
+}
+
+.info h1 {
+  margin: 40px 0 0 0;
+  padding: 0;
+  font-size: 75px;
+}
+
+.info h1 span {
+  margin: 0;
+}
+
+hr {
+  border: solid rgba(255, 255, 255, 0.3) 1px;
+  border-radius: 12px;
+  margin: 5rem 0;
+}
+
+.sobre {
+  display: flex;
+  width: 100%;
+}
+
+.video_apresentacao {
+  width: 49%;
 }
