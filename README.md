@@ -56,7 +56,7 @@ Após me tornar torcedor do time, em 2020 comecei a realmente assistir aos jogos
 
 ## Oportunidade do projeto 💡
 Desde então, o time me cativou o suficiente para me tornar torcedor e acompanhar os jogos, notícias e rumores acerca do clube. Sendo torcedor, sinto a necessidade de apresentar o time para que mais pessoas possam sentir essa mesma sensação e emoção que eu sinto sobre o time.
-Pensando nesta necessidade que será criado o Anfield Side. O Anfield Side será uma página para torcedores do Liverpool poderem acompanhar notícias do time, interagirem entre si como uma rede social e jogarem um simulador de UEFA Champions League. Este nome tem como tradução “Lado de Anfield”, pois Anfield é o estádio do Liverpool, então foi pensando na torcida que fica dentro do estádio que surgiu este nome. ^
+Pensando nesta necessidade que será criado o Anfield Side. O Anfield Side será uma página para torcedores do Liverpool poderem acompanhar notícias do time, interagirem entre si como uma rede social e jogarem um simulador de UEFA Champions League. Este nome tem como tradução “Lado de Anfield”, pois Anfield é o estádio do Liverpool, então foi pensando na torcida que fica dentro do estádio que surgiu este nome.
 
 # Objetivo 🎯
 Entregar até 20/11/2024 um website na máquina local com sistema integrado com banco de dados para guardar as informações do site, utilizando HTML, CSS, JavaScript, MySQL e Node.JS.
