@@ -1,3 +1,5 @@
+
+https://github.com/user-attachments/assets/fb9aa800-efe2-4e74-829f-8c61b04459ab
 # Anfield Side
 
 #### Projeto desenvolvido individualmente para prática e desenvolvimento de habilidades baseando-se numa temática que represente um gosto pessoal. Desafio lançado pela disciplina de Pesquisa e Inovação da Faculdade São Paulo Tech School. O tema selecionado foi sobre o clube inglês Liverpool FC.
@@ -84,6 +86,12 @@ Entre no diretório do projeto
 ```
 
 https://github.com/user-attachments/assets/b1ee3e76-5b45-4969-a060-5e2ac4da0e0c
+
+
+
+Uploading tuto_2.mp4…
+
+
 
 
 Instale as dependências
