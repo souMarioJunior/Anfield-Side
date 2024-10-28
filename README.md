@@ -83,8 +83,8 @@ Entre no diretório do projeto
   cd /Downloads/Anfield-Side
 ```
 
+https://github.com/user-attachments/assets/b1ee3e76-5b45-4969-a060-5e2ac4da0e0c
 
-https://github.com/user-attachments/assets/8fa46057-6ef2-4530-b449-3da456bae2a2
 
 Instale as dependências
 
