@@ -84,11 +84,10 @@ Entre no diretório do projeto
 ```
 
 #### Clonagem - Etapa 01
-https://github.com/user-attachments/assets/b1ee3e76-5b45-4969-a060-5e2ac4da0e0c
+https://github.com/user-attachments/assets/3dbeb78c-4f8c-4367-944b-907d63e65134
 
 #### Clonagem - Etapa 02
-https://github.com/user-attachments/assets/fb9aa800-efe2-4e74-829f-8c61b04459ab
-
+Uploading Clonagem - Etapa 02.mp4…
 
 
 Instale as dependências
