@@ -47,3 +47,39 @@ Entregar até 20/11/2024 um website na máquina local com sistema integrado com 
 
 # Justificativa ✅
  Aumentar a torcida do Liverpool no Brasil, promovendo a saúde e bem-estar aos torcedores através de sentimentos predominantemente agradáveis.
+
+## Tecnologias necessárias para executar o projeto
+- Git para a clonagem do repositório https://git-scm.com/downloads
+- Node.JS para a execução do projeto https://nodejs.org/en
+- MySQL e MySQL Workbench para o banco de dados do projeto https://dev.mysql.com/downloads/installer/
+
+## Como instalar
+
+Clone o projeto na pasta Downloads utilizando o Git Bash
+
+```bash
+  git clone https://github.com/souMarioJunior/Anfield-Side.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd /Downloads/Anfield-Side
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Inicie o servidor
+
+```bash
+  npm run start
+```
+
+
+
+## Autor
+- [@souMarioJunior](https://www.github.com/souMarioJunior)
