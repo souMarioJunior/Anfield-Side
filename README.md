@@ -62,7 +62,7 @@ Pensando nesta necessidade que será criado o Anfield Side. O Anfield Side será
 Entregar até 20/11/2024 um website na máquina local com sistema integrado com banco de dados para guardar as informações do site, utilizando HTML, CSS, JavaScript, MySQL e Node.JS.
 
 # Justificativa ✅
-Potencializar a união da torcida do Liverpool e alcançar novos torcedores, promovendo uma parceria por meio da implementação de um site para a torcida.
+Potencializar a união da torcida do Liverpool e alcançar novos torcedores, promovendo uma **parceria por meio da implementação de um site para a torcida**.
 
 ## Tecnologias necessárias para executar o projeto 💻
 - Git para a clonagem do repositório https://git-scm.com/downloads
