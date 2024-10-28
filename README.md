@@ -3,6 +3,7 @@
 #### Projeto desenvolvido individualmente para prática e desenvolvimento de habilidades baseando-se numa temática que represente um gosto pessoal. Desafio lançado pela disciplina de Pesquisa e Inovação da Faculdade São Paulo Tech School. O tema selecionado foi sobre o clube inglês Liverpool FC.
 
 ## Índice
+#### Contexto
 * [Contexto do projeto 📖](#contexto-do-projeto-)
 * [Futebol na nossa sociedade ⚽](#futebol-na-nossa-sociedade-)
 * [Tipos de ligas 🏆](#tipos-de-ligas-)
@@ -13,6 +14,7 @@
 * [ Oportunidade do projeto 💡](#oportunidade-do-projeto-)
 * [Objetivo 🎯](#objetivo-)
 * [Justificativa ✅](#justificativa-)
+#### Recursos necessários e instalação
 * [Tecnologias necessárias para executar o projeto 💻](#tecnologias-necessárias-para-executar-o-projeto-)
 * [Como instalar 👣](#como-instalar-)
 
