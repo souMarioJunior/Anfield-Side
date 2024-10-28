@@ -87,8 +87,7 @@ Entre no diretório do projeto
 https://github.com/user-attachments/assets/3dbeb78c-4f8c-4367-944b-907d63e65134
 
 #### Clonagem - Etapa 02
-Uploading Clonagem - Etapa 02.mp4…
-
+https://github.com/user-attachments/assets/fc2a8fe5-a9a2-4b10-96dd-9ad4f9b4efa8
 
 Instale as dependências
 
