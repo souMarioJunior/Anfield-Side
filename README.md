@@ -2,6 +2,20 @@
 
 #### Projeto desenvolvido individualmente para prática e desenvolvimento de habilidades baseando-se numa temática que represente um gosto pessoal. Desafio lançado pela disciplina de Pesquisa e Inovação da Faculdade São Paulo Tech School. O tema selecionado foi sobre o clube inglês Liverpool FC.
 
+## Índice
+* [Contexto do projeto 📖](#Contexto-do-projeto-📖)
+* [- Futebol na nossa sociedade ⚽](##-Futebol-na-nossa-sociedade-⚽)
+* [- Tipos de ligas 🏆](##-Tipos-de-ligas-🏆)
+* [- Ligas em destaque 👀](##-Ligas-em-destaque-👀)
+* [- UEFA Champions League ⚽🏆](##-UEFA-Champions-League-⚽🏆)
+* [- UEFA Champions League Edição 2019 🏆📝](##-UEFA-Champions-League-Edição-2019-🏆📝)
+* [- Meus primeiros contatos com o Liverpool 💖](##-Meus-primeiros-contatos-com-o-Liverpool-💖)
+* [- Oportunidade do projeto 💡](##-Oportunidade-do-projeto-💡)
+* [Objetivo 🎯](#Objetivo-🎯)
+* [Justificativa ✅](#Justificativa-✅)
+* [Tecnologias necessárias para executar o projeto 💻](#Tecnologias-necessárias-para-executar-o-projeto-💻)
+* [Como instalar 👣](#Como-instalar-👣)
+
 # Contexto do projeto 📖
 
 ## - Futebol na nossa sociedade ⚽
@@ -48,12 +62,12 @@ Entregar até 20/11/2024 um website na máquina local com sistema integrado com 
 # Justificativa ✅
  Aumentar a torcida do Liverpool no Brasil, promovendo a saúde e bem-estar aos torcedores através de sentimentos predominantemente agradáveis.
 
-## Tecnologias necessárias para executar o projeto
+## Tecnologias necessárias para executar o projeto 💻
 - Git para a clonagem do repositório https://git-scm.com/downloads
 - Node.JS para a execução do projeto https://nodejs.org/en
 - MySQL e MySQL Workbench para o banco de dados do projeto https://dev.mysql.com/downloads/installer/
 
-## Como instalar
+## Como instalar 👣
 
 Clone o projeto na pasta Downloads utilizando o Git Bash
 
