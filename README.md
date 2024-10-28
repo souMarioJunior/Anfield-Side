@@ -3,18 +3,18 @@
 #### Projeto desenvolvido individualmente para prática e desenvolvimento de habilidades baseando-se numa temática que represente um gosto pessoal. Desafio lançado pela disciplina de Pesquisa e Inovação da Faculdade São Paulo Tech School. O tema selecionado foi sobre o clube inglês Liverpool FC.
 
 ## Índice
-* [Contexto do projeto 📖](#contexto-do-projeto-)
-* [Futebol na nossa sociedade ⚽](##futebol-na-nossa-sociedade-)
-* [Tipos de ligas 🏆](##tipos-de-ligas-)
-* [Ligas em destaque 👀](##ligas-em-destaque-)
-* [UEFA Champions League ⚽🏆](##uefa-champions-league-)
-* [UEFA Champions League Edição 2019 🏆📝](##uefa-champions-league-edição-2019-)
-* [Meus primeiros contatos com o Liverpool 💖](##meus-primeiros-contatos-com-o-liverpool-)
-* [- Oportunidade do projeto 💡](##oportunidade-do-projeto-)
-* [Objetivo 🎯](#objetivo-)
-* [Justificativa ✅](#justificativa-)
-* [Tecnologias necessárias para executar o projeto 💻](#tecnologias-necessárias-para-executar-o-projeto-)
-* [Como instalar 👣](#como-instalar-)
+* [Contexto do projeto 📖](#Contexto-do-projeto)
+* [- Futebol na nossa sociedade ⚽](#Futebol-na-nossa-sociedade)
+* [- Tipos de ligas 🏆](#Tipos-de-ligas)
+* [- Ligas em destaque 👀](#Ligas-em-destaque)
+* [- UEFA Champions League ⚽🏆](#UEFA-Champions-League)
+* [- UEFA Champions League Edição 2019 🏆📝](#UEFA-Champions-League-Edição-2019)
+* [- Meus primeiros contatos com o Liverpool 💖](#Meus-primeiros-contatos-com-o-Liverpool)
+* [- Oportunidade do projeto 💡](#Oportunidade-do-projeto)
+* [Objetivo 🎯](#Objetivo)
+* [Justificativa ✅](#Justificativa)
+* [Tecnologias necessárias para executar o projeto 💻](#Tecnologias-necessárias-para-executar-o-projeto)
+* [Como instalar 👣](#Como-instalar)
 
 # Contexto do projeto 📖
 
