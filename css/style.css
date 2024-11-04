@@ -313,60 +313,60 @@ img {
 
 .img_itaquera {
   position: absolute;
-  height: 1300px;
-  width: 1300px;
+  height: 1000px;
+  width: 1000px;
   opacity: 0.2;
   margin-top: 1000px;
-  margin-right: 600px;
+  margin-right: 400px;
   z-index: -1;
 }
 
 .img_neymar {
   position: absolute;
-  margin-top: 1500px;
-  margin-left: 600px;
-  height: 1300px;
-  width: 1300px;
+  margin-top: 1600px;
+  margin-left: 500px;
+  height: 1000px;
+  width: 1000px;
   opacity: 0.2;
   z-index: -1;
 }
 
 .img_klopp {
   position: absolute;
-  margin-top: 2200px;
-  margin-right: 600px;
-  height: 1300px;
-  width: 1300px;
+  margin-top: 2150px;
+  margin-right: 400px;
+  height: 1000px;
+  width: 1000px;
   opacity: 0.2;
   z-index: -1;
 }
 
 .img_pos_jogo {
   position: absolute;
-  margin-top: 2600px;
-  margin-left: 600px;
-  height: 1300px;
-  width: 1300px;
+  margin-top: 2800px;
+  margin-left: 500px;
+  height: 1000px;
+  width: 1000px;
   opacity: 0.2;
   z-index: -1;
 }
 
 .img_champions_of_europe {
   position: absolute;
-  margin-top: 3300px;
-  margin-right: 600px;
-  height: 1300px;
-  width: 1300px;
+  margin-top: 3600px;
+  margin-right: 400px;
+  height: 1000px;
+  width: 1000px;
   opacity: 0.1;
   z-index: -2;
 }
 
 .img_ynwa {
   position: absolute;
-  margin-top: 4000px;
+  margin-top: 4100px;
   margin-left: 400px;
-  height: 1300px;
-  width: 1300px;
+  height: 1000px;
+  width: 1000px;
   opacity: 0.1;
   z-index: -1;
   transform: rotateY(180deg);
