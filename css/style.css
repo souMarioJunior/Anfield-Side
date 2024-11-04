@@ -315,48 +315,48 @@ img {
   position: absolute;
   height: 1000px;
   width: 1000px;
-  opacity: 0.2;
-  margin-top: 1000px;
-  margin-right: 400px;
+  opacity: 0.1;
+  margin-top: 1050px;
+  margin-right: 600px;
   z-index: -1;
 }
 
 .img_neymar {
   position: absolute;
-  margin-top: 1600px;
+  margin-top: 1650px;
   margin-left: 500px;
   height: 1000px;
   width: 1000px;
-  opacity: 0.2;
+  opacity: 0.1;
   z-index: -1;
 }
 
 .img_klopp {
   position: absolute;
-  margin-top: 2150px;
-  margin-right: 400px;
+  margin-top: 2200px;
+  margin-right: 500px;
   height: 1000px;
   width: 1000px;
-  opacity: 0.2;
+  opacity: 0.1;
   z-index: -1;
 }
 
 .img_pos_jogo {
   position: absolute;
   margin-top: 2800px;
-  margin-left: 500px;
-  height: 1000px;
-  width: 1000px;
-  opacity: 0.2;
+  margin-left: 400px;
+  height: 1200px;
+  width: 1200px;
+  opacity: 0.1;
   z-index: -1;
 }
 
 .img_champions_of_europe {
   position: absolute;
   margin-top: 3600px;
-  margin-right: 400px;
-  height: 1000px;
-  width: 1000px;
+  margin-right: 700px;
+  height: 900px;
+  width: 900px;
   opacity: 0.1;
   z-index: -2;
 }
@@ -364,9 +364,9 @@ img {
 .img_ynwa {
   position: absolute;
   margin-top: 4100px;
-  margin-left: 400px;
-  height: 1000px;
-  width: 1000px;
+  margin-left: 200px;
+  height: 1100px;
+  width: 1100px;
   opacity: 0.1;
   z-index: -1;
   transform: rotateY(180deg);
@@ -414,4 +414,89 @@ img {
   height: 350px;
   width: 350px;
   transform: rotateZ(-20deg);
+}
+
+.fade-in-left {
+	animation: fade-in-left 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s both;
+  animation-timeline: view();
+  animation-range: cover 0% cover 90%;
+}
+
+@keyframes fade-in-left {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.fade-left {
+	animation: fade-in-left 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s both;
+}
+
+@keyframes fade-left {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.fade-in-right {
+	animation: fade-in-right 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation-timeline: view();
+  animation-range: cover 0% cover 90%;
+}
+
+@keyframes fade-in-right {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.fade-in-fwd {
+	animation: fade-in-fwd 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@keyframes fade-in-fwd {
+  0% {
+    transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+.fade-in-top {
+	animation: fade-in-top 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@keyframes fade-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.bold {
+  font-weight: 600;
 }
