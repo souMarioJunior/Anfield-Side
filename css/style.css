@@ -1,14 +1,17 @@
 /* Fonte Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+/* Fonte Noto Color Emoji */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap");
+
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: Poppins, sans-serif;
+  font-family: Poppins, "Noto Color Emoji ";
   color: white;
   background-color: black;
 }
@@ -166,7 +169,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 6rem 0;
+  padding: 2rem 0;
   text-align: justify;
 }
 
@@ -203,7 +206,7 @@ h2 {
 }
 
 .pedaco_2 .side_2 h1 {
-    height: fit-content;
+  height: fit-content;
 }
 
 .pedaco_3 .side_1 {
@@ -215,6 +218,10 @@ h2 {
   width: 50%;
 }
 
+.pedaco_3 .side_1 h1 {
+  height: fit-content;
+}
+
 .pedaco_3 .side_2 {
   /* height: 300px; */
   /* border: solid violet; */
@@ -224,9 +231,9 @@ h2 {
 }
 
 .pedaco_4 .side_1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* height: 300px; */
   /* border: solid violet; */
   width: 40%;
@@ -264,6 +271,8 @@ h2 {
   /* height: 300px; */
   /* border: solid violet; */
   width: 50%;
+  display: flex;
+  justify-content: center;
 }
 
 .pedaco_6 .side_2 {
@@ -276,7 +285,7 @@ h2 {
 }
 .pedaco_6 .side_2 h1,
 .pedaco_5 .side_1 h1 {
-    height: fit-content;
+  height: fit-content;
 }
 
 .pedaco_1 .side_1 h1 {
@@ -288,46 +297,121 @@ h2 {
 }
 
 span {
-  font-size: 26px;
+  font-size: 24px;
   text-align: justify;
 }
 
 img {
-    height: 500px;
-    width: 500px;
+  height: 500px;
+  width: 500px;
 }
 
 .img_macca {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .img_itaquera {
-    position: absolute;
-    height: 1300px;
-    width: 1300px;
-    opacity: 0.1;
-    margin-top: 900px;
-    margin-right: 600px;
-    z-index: -1;
+  position: absolute;
+  height: 1300px;
+  width: 1300px;
+  opacity: 0.2;
+  margin-top: 1000px;
+  margin-right: 600px;
+  z-index: -1;
 }
 
 .img_neymar {
-    position: absolute;
-    margin-top: 1500px;
-    margin-left: 600px;
-    height: 1300px;
-    width: 1300px;
-    opacity: 0.1;
-    z-index: -1;
+  position: absolute;
+  margin-top: 1500px;
+  margin-left: 600px;
+  height: 1300px;
+  width: 1300px;
+  opacity: 0.2;
+  z-index: -1;
 }
 
 .img_klopp {
-    position: absolute;
-    margin-top: 2300px;
-    margin-right: 600px;
-    height: 1300px;
-    width: 1300px;
-    opacity: 0.1;
-    z-index: -1;
+  position: absolute;
+  margin-top: 2200px;
+  margin-right: 600px;
+  height: 1300px;
+  width: 1300px;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.img_pos_jogo {
+  position: absolute;
+  margin-top: 2600px;
+  margin-left: 600px;
+  height: 1300px;
+  width: 1300px;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.img_champions_of_europe {
+  position: absolute;
+  margin-top: 3300px;
+  margin-right: 600px;
+  height: 1300px;
+  width: 1300px;
+  opacity: 0.1;
+  z-index: -2;
+}
+
+.img_ynwa {
+  position: absolute;
+  margin-top: 4000px;
+  margin-left: 400px;
+  height: 1300px;
+  width: 1300px;
+  opacity: 0.1;
+  z-index: -1;
+  transform: rotateY(180deg);
+}
+
+.traco_1 {
+  position: absolute;
+  margin-top: 1620px;
+  height: 220px;
+  width: 220px;
+  transform: rotateZ(-20deg);
+}
+
+.traco_2 {
+  position: absolute;
+  margin-top: 2380px;
+  margin-right: 30px;
+  height: 220px;
+  width: 220px;
+  transform: rotateZ(-150deg);
+}
+
+.traco_3 {
+  position: absolute;
+  margin-top: 2910px;
+  margin-left: 40px;
+  height: 220px;
+  width: 220px;
+  transform: rotateZ(-35deg);
+}
+
+.traco_4 {
+  position: absolute;
+  margin-top: 3760px;
+  margin-left: 30px;
+  height: 220px;
+  width: 220px;
+  transform: rotateZ(30deg);
+}
+
+.traco_5 {
+  position: absolute;
+  margin-top: 4190px;
+  margin-left: 60px;
+  height: 350px;
+  width: 350px;
+  transform: rotateZ(-20deg);
 }
