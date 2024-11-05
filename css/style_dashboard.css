@@ -83,7 +83,7 @@ li {
   padding: 0 1rem;
 }
 
-.cadLog {
+.sair {
   display: flex;
   text-align: center;
   align-items: center;
@@ -91,14 +91,14 @@ li {
   font-weight: 500;
 }
 
-.cadLog a {
+.sair a {
   text-decoration: none;
   padding: 0 2rem;
   color: white;
   font-weight: 600;
 }
 
-.cadLog a:hover {
+.sair a:hover {
   font-weight: 600;
   color: #dc2626;
 }
