@@ -175,12 +175,6 @@ h5 {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* .campos img {
-    height: 100%;
-    width: auto;
-    border: solid;
-} */
-
 .icon {
     display: flex;
     justify-content: center;
@@ -245,72 +239,6 @@ button {
     width: 450px;
 }
 
-.fade-in-left {
-	animation: fade-in-left 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s both;
-  animation-timeline: view();
-  animation-range: cover 0% cover 90%;
-}
-
-@keyframes fade-in-left {
-  0% {
-    transform: translateX(-50px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.fade-left {
-	animation: fade-in-left 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s both;
-}
-
-@keyframes fade-left {
-  0% {
-    transform: translateX(-50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.fade-in-right {
-	animation: fade-in-right 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-  animation-timeline: view();
-  animation-range: cover 0% cover 90%;
-}
-
-@keyframes fade-in-right {
-  0% {
-    transform: translateX(50px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.fade-in-fwd {
-	animation: fade-in-fwd 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-
-@keyframes fade-in-fwd {
-  0% {
-    transform: translateZ(-80px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateZ(0);
-    opacity: 1;
-  }
-}
-
 .fade-in-top {
 	animation: fade-in-top 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
@@ -328,15 +256,4 @@ button {
 
 .bold {
   font-weight: 600;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #F4F4F4;
-}
-::-webkit-scrollbar {
-  width: 6px;
-  background: #F4F4F4;
-}
-::-webkit-scrollbar-thumb {
-  background: #dc2626;
 }
