@@ -24,6 +24,55 @@ main {
   width: 100%;
 }
 
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 1;
+  color: black;
+}
+
+.box_modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 12px;
+  height: fit-content;
+  width: 800px;
+  padding: 2rem;
+}
+
+.icon_modal {
+  height: fit-content;
+}
+
+.icon_modal h1 {
+  font-size: 100px;
+  width: 100%;
+  justify-content: center;
+}
+
+.titulo_modal h1 {
+  font-weight: 600;
+  justify-content: center;
+}
+
+.mensagem_modal span {
+  font-size: larger;
+  justify-content: center;
+}
+
+.icon_modal, .titulo_modal, .mensagem_modal, .btn_modal {
+  width: 100%;
+  text-align: center;
+}
+
 .bg {
   background-image: url(../assets/imgs/bg-anfield-transition.png);
   background-size: cover;
@@ -130,7 +179,7 @@ li {
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 40px;
     width: 80%;
-    height: 100%;
+    height: fit-content;
     justify-content: center;
     align-items: center;
 }
@@ -142,6 +191,7 @@ li {
     height: 90%;
     width: 80%;
     /* text-align: center; */
+    padding: 2rem 0 2rem 0;
 }
 
 .infos h1 {
@@ -221,6 +271,8 @@ select {
     font-family: Poppins;
     font-size: medium;
     appearance: none;
+    border: none;
+    outline: none;
 }
 
 option {
@@ -238,6 +290,43 @@ button {
     font-size: xx-large;
     font-weight: 500;
     cursor: pointer;
+    opacity: 0.9;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+.btn_modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+
+.btn_modal a {
+  width: 100%;
+  padding: 1rem 2rem;
+  color: white;
+  background-color: #dc2626;
+  border: none;
+  border-radius: 8px;
+  font-family: Poppins;
+  font-size: xx-large;
+  font-weight: 500;
+  cursor: pointer;
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.btn_modal a:hover {
+  opacity: 1;
+}
+
+.boas_vindas {
+  padding: 1rem 0 1rem 0;
+  text-align: center;
 }
 
 .right_side {
@@ -270,4 +359,15 @@ button {
 
 .bold {
   font-weight: 600;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #F4F4F4;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  background: #F4F4F4;
+}
+::-webkit-scrollbar-thumb {
+  background: #dc2626;
 }
