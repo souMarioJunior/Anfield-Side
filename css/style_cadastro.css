@@ -63,9 +63,22 @@ main {
   justify-content: center;
 }
 
+.titulo_modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo {
+  font-weight: 600;
+  font-size: 42px;
+  color: #0f172a;
+}
+
 .mensagem_modal span {
   font-size: larger;
   justify-content: center;
+  color: #0f172a;
 }
 
 .icon_modal, .titulo_modal, .mensagem_modal, .btn_modal {
