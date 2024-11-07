@@ -186,6 +186,30 @@ function validarCadastro() {
   }
   if (validacaoNome == true && validacaoEmail == true && validacaoSenha == true && validacaoRepetirSenha == true && validacaoSelect == true) {
     modal.style.display = "flex";
+
+    fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        nomeServer: nomeCompleto,
+        emailServer: email,
+        senhaServer: senha,
+        jogadorServer: selectJogadores
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta); 
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        finalizarAguardar();
+      });
+
+    return false;
   }
 
   console.log(selectJogadores);
