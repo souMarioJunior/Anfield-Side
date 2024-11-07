@@ -1,3 +1,5 @@
+// VALIDAÇÕES DE CADASTRO
+// -----------------------------------------------------------------------------------------------------------------
 var validacaoNome = false;
 var validacaoEmail = false;
 var validacaoEmail = false;
