@@ -58,26 +58,9 @@ main {
   justify-content: center;
 }
 
-.titulo_modal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .titulo_modal h1 {
   font-weight: 600;
   justify-content: center;
-}
-
-.img_mensagem_modal {
-  background-color: black;
-  justify-content: center;
-  align-items: center;
-  width: fit-content;
-}
-
-.titulo {
-  font-size: 42px;
 }
 
 .mensagem_modal span {
