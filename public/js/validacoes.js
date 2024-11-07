@@ -54,12 +54,12 @@ function mostrarErrosCadastroSenha() {
 
   // Validação de senha
   if (senha.length < 8) {
-    validacaoSenha = false
+    validacaoSenha = false;
     document.getElementById("ipt_cad_senha").style.color = "#dc2626";
     document.getElementById("campo_senha").style.border = "solid #dc2626 thin";
     document.getElementById("campo_senha").style.borderRadius = "4px";
     document.getElementById("erro_senha").style.display = "block";
-    
+
     console.log(senha < 8);
   } else {
     validacaoSenha = true;
@@ -101,22 +101,22 @@ function validarCadastro() {
   var selectJogadores = document.getElementById("slc_jogador").value;
   var modal = document.querySelector(".modal");
 
-    // Validação nome
-    if (nomeCompleto.length < 3) {
-      validacaoNome = false;
-      document.getElementById("ipt_cad_nome").style.color = "#dc2626";
-      document.getElementById("campo_nome").style.border = "solid #dc2626 thin";
-      document.getElementById("campo_nome").style.borderRadius = "4px";
-      document.getElementById("erro_nome").style.display = "block";
-    } else {
-      validacaoNome = true;
-      document.getElementById("campo_nome").style.border = "none";
-      document.getElementById("ipt_cad_nome").style.color = "#d9d9d9";
-      document.getElementById("campo_nome").style.borderRadius = "none";
-      document.getElementById("erro_nome").style.display = "none";
-    }
+  // Validação nome
+  if (nomeCompleto.length < 3) {
+    validacaoNome = false;
+    document.getElementById("ipt_cad_nome").style.color = "#dc2626";
+    document.getElementById("campo_nome").style.border = "solid #dc2626 thin";
+    document.getElementById("campo_nome").style.borderRadius = "4px";
+    document.getElementById("erro_nome").style.display = "block";
+  } else {
+    validacaoNome = true;
+    document.getElementById("campo_nome").style.border = "none";
+    document.getElementById("ipt_cad_nome").style.color = "#d9d9d9";
+    document.getElementById("campo_nome").style.borderRadius = "none";
+    document.getElementById("erro_nome").style.display = "none";
+  }
 
-      // Validação email
+  // Validação email
   if (
     (!email.includes(".com") && !email.includes(".com.br")) ||
     email.length < 7 ||
@@ -134,15 +134,15 @@ function validarCadastro() {
     document.getElementById("campo_email").style.borderRadius = "none";
     document.getElementById("erro_email").style.display = "none";
   }
-  
+
   // Validação de senha
   if (senha.length < 8) {
-    validacaoSenha = false
+    validacaoSenha = false;
     document.getElementById("ipt_cad_senha").style.color = "#dc2626";
     document.getElementById("campo_senha").style.border = "solid #dc2626 thin";
     document.getElementById("campo_senha").style.borderRadius = "4px";
     document.getElementById("erro_senha").style.display = "block";
-    
+
     console.log(senha < 8);
   } else {
     validacaoSenha = true;
@@ -152,27 +152,27 @@ function validarCadastro() {
     document.getElementById("erro_senha").style.display = "none";
   }
 
-    // Validação de senhas iguais
-    if (repetirSenha != senha || repetirSenha == "") {
-      validacaoRepetirSenha = false;
-      document.getElementById("ipt_cad_repetir_senha").style.color = "#dc2626";
-      document.getElementById("ipt_cad_repetir_senha").style.color = "#dc2626";
-      document.getElementById("campo_repetir_senha").style.border =
-        "solid #dc2626 thin";
-      document.getElementById("campo_repetir_senha").style.borderRadius = "4px";
-      document.getElementById("erro_repetir_senha").style.display = "block";
-  
-      console.log(senha < 8);
-    } else {
-      validacaoRepetirSenha = true;
-      document.getElementById("campo_repetir_senha").style.border = "none";
-      document.getElementById("ipt_cad_repetir_senha").style.color = "#d9d9d9";
-      document.getElementById("campo_repetir_senha").style.borderRadius = "none";
-      document.getElementById("erro_repetir_senha").style.display = "none";
-    }
+  // Validação de senhas iguais
+  if (repetirSenha != senha || repetirSenha == "") {
+    validacaoRepetirSenha = false;
+    document.getElementById("ipt_cad_repetir_senha").style.color = "#dc2626";
+    document.getElementById("ipt_cad_repetir_senha").style.color = "#dc2626";
+    document.getElementById("campo_repetir_senha").style.border =
+      "solid #dc2626 thin";
+    document.getElementById("campo_repetir_senha").style.borderRadius = "4px";
+    document.getElementById("erro_repetir_senha").style.display = "block";
 
-    // Validação select
-    if (selectJogadores == "") {
+    console.log(senha < 8);
+  } else {
+    validacaoRepetirSenha = true;
+    document.getElementById("campo_repetir_senha").style.border = "none";
+    document.getElementById("ipt_cad_repetir_senha").style.color = "#d9d9d9";
+    document.getElementById("campo_repetir_senha").style.borderRadius = "none";
+    document.getElementById("erro_repetir_senha").style.display = "none";
+  }
+
+  // Validação select
+  if (selectJogadores == "") {
     validacaoSelect = false;
     document.getElementById("campo_select").style.border = "solid #dc2626 thin";
     document.getElementById("campo_select").style.borderRadius = "4px";
@@ -184,8 +184,38 @@ function validarCadastro() {
     document.getElementById("campo_nome").style.borderRadius = "none";
     document.getElementById("erro_selecionar_jogador").style.display = "none";
   }
-  if (validacaoNome == true && validacaoEmail == true && validacaoSenha == true && validacaoRepetirSenha == true && validacaoSelect == true) {
+  if (
+    validacaoNome == true &&
+    validacaoEmail == true &&
+    validacaoSenha == true &&
+    validacaoRepetirSenha == true &&
+    validacaoSelect == true
+  ) {
     modal.style.display = "flex";
+
+    fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        nomeServer: nomeCompleto,
+        emailServer: email,
+        senhaServer: senha,
+        jogadorServer: selectJogadores,
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        finalizarAguardar();
+      });
+
+    return false;
   }
 
   console.log(selectJogadores);
