@@ -46,6 +46,7 @@ main {
   height: fit-content;
   width: 800px;
   padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .icon_modal {
