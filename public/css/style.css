@@ -206,8 +206,10 @@ h2 {
   /* height: 300px; */
   /* border: solid violet; */
   width: 40%;
-  filter: drop-shadow(-10px 10px 0 #dc2626);
+}
 
+.container_historia_do_clube .pedaco_1 .side_2 {
+  filter: drop-shadow(-10px 10px 0 #dc2626);
 }
 
 .pedaco_2 .side_1 {
