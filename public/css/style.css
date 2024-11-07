@@ -38,6 +38,8 @@ main {
   /* border: solid blue; */
 }
 
+
+
 nav {
   /* border: solid green; */
   height: 120px;
@@ -165,7 +167,7 @@ h2 {
   height: 90%;
 }
 
-.container_minha_historia {
+.container_minha_historia, .container_historia_do_clube {
   /* border: solid white; */
   width: 65%;
   display: flex;
@@ -185,6 +187,10 @@ h2 {
   text-align: justify;
 }
 
+.container_historia_do_clube h1 {
+  width: 100%;
+}
+
 .pedaco_1 .side_1 {
   display: flex;
   justify-content: center;
@@ -200,6 +206,8 @@ h2 {
   /* height: 300px; */
   /* border: solid violet; */
   width: 40%;
+  filter: drop-shadow(-10px 10px 0 #dc2626);
+
 }
 
 .pedaco_2 .side_1 {
@@ -289,6 +297,7 @@ h2 {
   width: 50%;
   display: flex;
   justify-content: center;
+  align-items: center;
   filter: drop-shadow(10px 10px 0 #dc2626);
 }
 
