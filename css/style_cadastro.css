@@ -291,6 +291,7 @@ button {
     font-weight: 500;
     cursor: pointer;
     opacity: 0.9;
+    outline: none;
 }
 
 button:hover {

@@ -9,7 +9,7 @@
   </head>
   <body>
     <main>
-      <div class="modal" style="display: flex;">
+      <div class="modal" style="display: none">
         <div class="box_modal">
           <div class="icon_modal">
             <h1>🥳</h1>
@@ -18,9 +18,13 @@
             <h1>Boa! 🔥</h1>
           </div>
           <div class="mensagem_modal">
-            <span>Você se tornou um <span style="color: #dc2626;"><b>Red</b></span>! Agora você pode realizar a entrada e aproveitar a plataforma 😎</span>
+            <span
+              >Você se tornou um <span style="color: #dc2626"><b>Red</b></span
+              >! Agora você pode realizar a entrada e aproveitar a plataforma
+              😎</span
+            >
           </div>
-          <br><br>
+          <br /><br />
           <div class="btn_modal">
             <a href="login.html">Vamos lá! 😜</a>
           </div>
@@ -54,52 +58,73 @@
                 </span>
 
                 <div class="box_campos">
-                  <p id="erro_nome" style="display: none; color: #dc2626;">Deve conter no mínimo 3 caracteres</p>
+                  <p id="erro_nome" style="display: none; color: #dc2626">
+                    Deve conter no mínimo 3 caracteres
+                  </p>
                   <div id="campo_nome" class="campos">
                     <div class="icon">
                       <img src="assets/icons/icon_user.png" alt="" />
                     </div>
                     <input
-                    id="ipt_cad_nome"
-                    oninput="mostrarErrosCadastro()"
+                      id="ipt_cad_nome"
+                      oninput="mostrarErrosCadastro()"
                       type="text"
                       placeholder="Informe seu nome completo"
                     />
                   </div>
-                  <p id="erro_email" style="display: none; color: #dc2626;">Deve conter pelo menos 7 dígitos, final em ".com" ou ".com.br", e "@"</p>
+                  <p id="erro_email" style="display: none; color: #dc2626">
+                    Deve conter pelo menos 7 dígitos, final em ".com" ou
+                    ".com.br", e "@"
+                  </p>
                   <div id="campo_email" class="campos">
                     <div class="icon">
                       <img src="assets/icons/icon_email.png" alt="" />
                     </div>
                     <input
-                    id="ipt_cad_email"
-                    oninput="mostrarErrosCadastroEmail()"
+                      id="ipt_cad_email"
+                      oninput="mostrarErrosCadastroEmail()"
                       type="text"
                       placeholder="Informe seu endereço de email"
                     />
                   </div>
-                  <p id="erro_senha" style="display: none; color: #dc2626;">Deve conter no mínimo 8 dígitos</p>
+                  <p id="erro_senha" style="display: none; color: #dc2626">
+                    Deve conter no mínimo 8 dígitos
+                  </p>
                   <div id="campo_senha" class="campos">
                     <div class="icon">
                       <img src="assets/icons/icon_password.png" alt="" />
                     </div>
                     <input
-                    id="ipt_cad_senha"
-                    oninput="mostrarErrosCadastroSenha()"
+                      id="ipt_cad_senha"
+                      oninput="mostrarErrosCadastroSenha()"
                       type="password"
                       placeholder="Faça a criação de uma senha"
                     />
                   </div>
-                  <p id="erro_repetir_senha" style="display: none; color: #dc2626;">As senhas não coincidem</p>
+                  <p
+                    id="erro_repetir_senha"
+                    style="display: none; color: #dc2626"
+                  >
+                    As senhas não coincidem
+                  </p>
                   <div id="campo_repetir_senha" class="campos">
                     <div class="icon">
                       <img src="assets/icons/icon_password.png" alt="" />
                     </div>
                     <input
-                    id="ipt_cad_repetir_senha"
-                    oninput="mostrarErrosConfirmarSenha()" type="password" placeholder="Repita sua nova senha" />
+                      id="ipt_cad_repetir_senha"
+                      oninput="mostrarErrosConfirmarSenha()"
+                      type="password"
+                      placeholder="Repita sua nova senha"
+                    />
                   </div>
-                  <div class="campos">
+                  <p
+                    id="erro_selecionar_jogador"
+                    style="display: none; color: #dc2626"
+                  >
+                    Selecione um jogador favorito
+                  </p>
+                  <div id="campo_select" class="campos">
                     <div class="icon">
                       <img src="assets/icons/icon_arrow_down.png" alt="" />
                     </div>
@@ -107,20 +132,21 @@
                       <option value="" disabled selected>
                         Selecione seu jogador favorito
                       </option>
-                      <option value="">Alisson Becker</option>
-                      <option value="">Virgil Van Dijk</option>
-                      <option value="">Ibrahima Konaté</option>
-                      <option value="">Andrew Robertson</option>
-                      <option value="">Trent Alexander-Arnold</option>
-                      <option value="">Ryan-Jiro Gravenberch</option>
-                      <option value="">Alexis Mac Allister</option>
-                      <option value="">Dominik Szoboszlai</option>
-                      <option value="">Luis Diaz</option>
-                      <option value="">Mohamed Salah</option>
-                      <option value="">Darwin Nunez</option>
-                      <option value="">Cody Gakpo</option>
+                      <option value="alisson">Alisson Becker</option>
+                      <option value="virgil">Virgil Van Dijk</option>
+                      <option value="konate">Ibrahima Konaté</option>
+                      <option value="robertson">Andrew Robertson</option>
+                      <option value="trent">Trent Alexander-Arnold</option>
+                      <option value="graven">Ryan-Jiro Gravenberch</option>
+                      <option value="macca">Alexis Mac Allister</option>
+                      <option value="szobo">Dominik Szoboszlai</option>
+                      <option value="diaz">Luis Diaz</option>
+                      <option value="salah">Mohamed Salah</option>
+                      <option value="darwin">Darwin Nunez</option>
+                      <option value="gakpo">Cody Gakpo</option>
                     </select>
                   </div>
+                  <br />
 
                   <div class="campos">
                     <button onclick="validarCadastro()">Cadastrar 🥳</button>
