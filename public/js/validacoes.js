@@ -11,7 +11,7 @@ function mostrarErrosCadastro() {
   var nomeCompleto = document.getElementById("ipt_cad_nome").value;
 
   // Validação nome
-  if (nomeCompleto.length < 3) {
+  if (nomeCompleto.length < 2) {
     validacaoNome = false;
     document.getElementById("ipt_cad_nome").style.color = "#dc2626";
     document.getElementById("campo_nome").style.border = "solid #dc2626 thin";
