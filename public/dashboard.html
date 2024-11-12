@@ -33,7 +33,7 @@
         <!-- Banner -->
         <div class="banner">
           <div class="left_side">
-            <h1>Nome</h1>
+            <h1>Mário Junior</h1>
             <span class="bio"
               >Olá! 👋 Além de torcedor do Liverpool eu também sou estudante de
               Ciências da Computação na SP Tech 🤓☝. Massa, né? 😁</span
@@ -57,8 +57,18 @@
           </div>
 
           <div class="right_side">
-            <div>
+            <h1>Popularidade dos jogadores</h1>
+            <div class="chart">
               <canvas id="myChart"></canvas>
+            </div>
+
+            <h1>Rank Game Quiz</h1>
+            <div class="ranking">
+              <h2>🥇 Mário Junior - 1º</h2>
+              <h2>🥈 Aaron Cutipa - 2º</h2>
+              <h2>🥉 Guilherme BIOS - 3º</h2>
+              <h2>Henrique Andrade - 4º</h2>
+              <h2>Laysa Bispo - 5º</h2>
             </div>
           </div>
         </div>
@@ -79,7 +89,9 @@
       datasets: [{
         label: '# of Votes',
         data: [12, 19, 3, 5, 2, 3],
-        borderWidth: 1
+        borderWidth: 1,
+        borderColor: '#6EE7B7',
+        backgroundColor: '#6EE7B7'
       }]
     },
     options: {
