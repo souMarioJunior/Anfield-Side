@@ -43,8 +43,20 @@ h1 {
   padding: 0;
   font-size: 48px;
   font-weight: 400;
-  height: 100%;
+  height: fit-content;
+  width: 100%;
   align-items: center;
+  padding: 2rem 0 0 0;
+}
+
+.left_side h1 {
+  font-weight: 600;
+}
+
+span {
+  width: 100%;
+  height: fit-content;
+  font-size: larger;
 }
 
 .group_li {
@@ -112,10 +124,16 @@ li {
 
 .left_side {
     display: flex;
+    flex-direction: column;
     width: 50%;
     /* border: solid blue; */
-    justify-content: center;
+    justify-content: start;
     align-items: center;
+    text-align: justify;
+}
+
+.recorde {
+  font-size: 42px;
 }
 
 .box {
@@ -206,7 +224,7 @@ option {
     background-color: black;
 }
 
-button {
+button, .btn {
     width: 100%;
     padding: 1rem 0;
     color: white;
@@ -217,6 +235,12 @@ button {
     font-size: xx-large;
     font-weight: 500;
     cursor: pointer;
+    text-align: center;
+    opacity: 0.8;
+}
+
+.btn:hover {
+  opacity: 1;
 }
 
 .right_side {
@@ -230,6 +254,22 @@ button {
 .right_side img {
     height: 600px;
     width: 450px;
+}
+
+.likes {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  align-items: center;
+}
+
+.likes img {
+  /* border: solid blue; */
+  margin: 0;
+}
+
+.likes span {
+  width: min-content;
 }
 
 .fade-in-top {

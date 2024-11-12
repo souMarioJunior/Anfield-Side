@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Perfil | Anfield Side</title>
     <link rel="stylesheet" href="css/style_dashboard.css" />
-    <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="assets/icons/favicon.ico"
+      type="image/x-icon"
+    />
   </head>
   <body>
     <main>
@@ -19,7 +23,7 @@
           <div class="group_li">
             <li><a href="feed.html">Notícias</a></li>
             <li><a href="game.html">Game</a></li>
-            <li><a style="color: #dc2626;">Pefil</a></li>
+            <li><a style="color: #dc2626">Perfil</a></li>
           </div>
           <div class="sair">
             <a href="login.html">Sair</a>
@@ -27,8 +31,63 @@
         </nav>
 
         <!-- Banner -->
-        <div class="banner"></div>
+        <div class="banner">
+          <div class="left_side">
+            <h1>Nome</h1>
+            <span class="bio"
+              >Olá! 👋 Além de torcedor do Liverpool eu também sou estudante de
+              Ciências da Computação na SP Tech 🤓☝. Massa, né? 😁</span
+            >
+
+            <h1>Jogador favorito ⚽</h1>
+            <span class="jogador_favorito">Mohamed Salah</span>
+
+            <h1>Avaliação de notícias 📰</h1>
+            <div class="likes">
+              <img src="assets/ilustracoes_noticias/like.png" alt="">
+              <span>999</span>
+              <img src="assets/ilustracoes_noticias/deslike.png" alt="">
+              <span>12</span>
+            </div>
+
+            <h1 class="recorde">Recorde no Game Quiz 🤩</h1>
+            <span>Tantos acertos</span>
+            <br><br><br>
+            <a class="btn">Editar informações 📝</a>
+          </div>
+
+          <div class="right_side">
+            <div>
+              <canvas id="myChart"></canvas>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   </body>
 </html>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
