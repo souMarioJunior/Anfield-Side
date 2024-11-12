@@ -179,7 +179,8 @@ h2 {
 .pedaco_3,
 .pedaco_4,
 .pedaco_5,
-.pedaco_6 {
+.pedaco_6,
+.pedaco_7 {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -311,6 +312,11 @@ h2 {
   /* border: solid violet; */
   width: 40%;
 }
+
+.pedaco_7 .side_1 {
+  width: 50%;
+}
+
 .pedaco_6 .side_2 h1,
 .pedaco_5 .side_1 h1 {
   height: fit-content;
@@ -400,6 +406,76 @@ img {
   transform: rotateY(180deg);
 }
 
+.img_estatua {
+  position: absolute;
+  margin-top: 5200px;
+  margin-right: 500px;
+  height: 1100px;
+  width: 1100px;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.img_primeiro_titulo {
+  position: absolute;
+  margin-top: 5700px;
+  margin-left: 500px;
+  height: 1100px;
+  width: 1100px;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.img_bill_shankly {
+  position: absolute;
+  margin-top: 6150px;
+  margin-right: 500px;
+  height: 1100px;
+  width: 1100px;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.img_primeira_champions {
+  position: absolute;
+  margin-top: 6800px;
+  margin-left: 500px;
+  height: 1100px;
+  width: 1100px;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.img_tragedia {
+  position: absolute;
+  margin-top: 7350px;
+  margin-right: 500px;
+  height: 1100px;
+  width: 1100px;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.img_klopp_bone {
+  position: absolute;
+  margin-top: 8000px;
+  margin-left: 500px;
+  height: 1100px;
+  width: 1100px;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.img_arne_slot {
+  position: absolute;
+  margin-top: 8750px;
+  margin-right: 500px;
+  height: 1100px;
+  width: 1100px;
+  opacity: 0.1;
+  z-index: -1;
+}
+
 .traco_1 {
   position: absolute;
   margin-top: 1620px;
@@ -442,6 +518,106 @@ img {
   height: 350px;
   width: 350px;
   transform: rotateZ(-20deg);
+}
+
+.traco_6 {
+  position: absolute;
+  margin-top: 4800px;
+  height: 350px;
+  width: 350px;
+  transform: rotateZ(-40deg);
+}
+
+.traco_7 {
+  position: absolute;
+  margin-top: 5080px;
+  margin-left: 700px;
+  height: 350px;
+  width: 350px;
+  /* transform: rotateZ(-10deg); */
+  /* transform: rotateY(180deg); */
+  /* transform: rotateX(180deg); */
+}
+
+/* .traco_8 {
+  position: absolute;
+  margin-top: 5550px;
+  margin-left: 120px;
+  height: 120px;
+  width: 120px;
+  transform: rotateZ(-100deg);
+} */
+
+.traco_9 {
+  position: absolute;
+  margin-top: 5850px;
+  margin-right: 300px;
+  height: 220px;
+  width: 220px;
+  transform: rotateZ(150deg);
+  /* transform: rotateY(180deg); */
+  /* transform: rotateX(180deg); */
+}
+
+.traco_10 {
+  position: absolute;
+  margin-top: 6320px;
+  margin-left: 100px;
+  height: 220px;
+  width: 220px;
+  transform: rotateZ(40deg);
+  /* transform: rotateY(180deg); */
+  /* transform: rotateX(180deg); */
+}
+
+.traco_11 {
+  position: absolute;
+  margin-top: 7000px;
+  margin-right: 100px;
+  height: 220px;
+  width: 220px;
+  transform: rotateZ(150deg);
+  /* transform: rotateY(180deg); */
+  /* transform: rotateX(180deg); */
+}
+
+.traco_12 {
+  position: absolute;
+  margin-top: 7500px;
+  margin-right: 40px;
+  height: 220px;
+  width: 220px;
+  transform: rotateZ(-150deg);
+  /* transform: rotateY(180deg); */
+  /* transform: rotateX(180deg); */
+}
+
+.traco_13 {
+  position: absolute;
+  margin-top: 8100px;
+  margin-left: 100px;
+  height: 220px;
+  width: 220px;
+  transform: rotateZ(140deg);
+  /* transform: rotateY(180deg); */
+  /* transform: rotateX(180deg); */
+}
+
+.traco_14 {
+  position: absolute;
+  margin-top: 8850px;
+  margin-left: 100px;
+  height: 220px;
+  width: 220px;
+  transform: rotateZ(-130deg);
+  /* transform: rotateY(180deg); */
+  /* transform: rotateX(180deg); */
+}
+
+.cc {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
 }
 
 .btn_up {
@@ -554,7 +730,7 @@ img {
   display: flex;
   position: absolute;
   width: 100%;
-  height: 430vh;
+  height: 950vh;
   background-color: rgba(0, 0, 0, 0.7);
   margin-top: 110vh;
 }
