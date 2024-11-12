@@ -106,8 +106,70 @@ li {
 .banner {
     display: flex;
     width: 100%;
+    flex-direction: column;
     /* border: solid red; */
     height: 80vh;
+}
+
+.noticia {
+  display: flex;
+  flex-direction: column;
+}
+
+.banner h1 {
+  height: 100px;
+  width: 100%;
+  font-weight: 600;
+}
+
+.noticia h2 {
+  height: fit-content;
+  font-weight: 400;
+}
+
+.ilustracao {
+  height: 50vh;
+  width: 100%;
+  border-radius: 12px;
+  /* background-image: url(../assets/ilustracoes_noticias/wirtz.png); */
+  background-size: cover;
+  background-position: center;
+}
+
+.wirtz {
+  background-image: url(../assets/ilustracoes_noticias/wirtz.png);
+}
+
+.salah {
+  background-image: url(../assets/ilustracoes_noticias/salah.png);
+}
+
+.konate {
+  background-image: url(../assets/ilustracoes_noticias/konate.png);
+}
+
+.murillo {
+  background-image: url(../assets/ilustracoes_noticias/murillo.png);
+}
+
+.alexander {
+  background-image: url(../assets/ilustracoes_noticias/alexander.png);
+}
+
+hr {
+  width: 100%;
+  margin: 3rem 0;
+  border: #dc2626 solid thin;
+}
+
+.manchete {
+  padding: 1rem 0;
+  text-align: justify;
+}
+
+.manchete a {
+  color: #dc2626;
+  text-decoration: none;
 }
 
 .left_side {
@@ -249,4 +311,15 @@ button {
 
 .bold {
   font-weight: 600;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #F4F4F4;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  background: #F4F4F4;
+}
+::-webkit-scrollbar-thumb {
+  background: #dc2626;
 }
