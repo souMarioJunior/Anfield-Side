@@ -114,6 +114,7 @@ li {
 .noticia {
   display: flex;
   flex-direction: column;
+  padding: 2rem 0;
 }
 
 .banner h1 {
