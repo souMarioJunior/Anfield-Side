@@ -282,6 +282,17 @@ button {
     cursor: pointer;
 }
 
+.box_likes {
+  display: flex;
+  justify-content: start;
+  text-align: center;
+  align-items: center;
+}
+
+.box_likes img {
+  cursor: pointer;
+}
+
 .right_side {
     display: flex;
     width: 50%;
