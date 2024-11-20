@@ -25,7 +25,11 @@ main {
 }
 
 .container {
+  /* display: flex;
+  flex-direction: column; */
   width: 65%;
+  align-items: center;
+  /* justify-content: center; */
   /* border: solid blue; */
 }
 
@@ -45,6 +49,40 @@ h1 {
   font-weight: 400;
   height: 100%;
   align-items: center;
+}
+
+.saudacao h1 {
+  font-size: 48px;
+  font-weight: 600;
+  height: fit-content;
+  width: fit-content;
+  text-align: left;
+  justify-content: left;
+  /* border: solid; */
+}
+
+.saudacao .nome {
+  color: #dc2626;
+  font-size: 48px;
+  font-weight: 600;
+  height: fit-content;
+  width: fit-content;
+  margin-left: 1rem;
+  /* border: solid; */
+}
+
+.saudacao {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  /* border: solid; */
+}
+
+.box_infos .desc {
+  color: white;
+  font-size: 22px;
+  text-align: center;
 }
 
 .group_li {
@@ -105,10 +143,37 @@ li {
 
 .banner {
     display: flex;
+    flex-direction: column;
     width: 100%;
     /* border: solid red; */
     height: 80vh;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
 }
+
+.box_infos {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  /* border: solid; */
+}
+
+.box_infos button {
+  opacity: 0.9;
+}
+
+.box_infos button:hover {
+  opacity: 1;
+}
+
+/* .banner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: solid red;
+  height: 80vh;
+} */
 
 .left_side {
     display: flex;
