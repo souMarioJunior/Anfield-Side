@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Notícias | Anfield Side</title>
     <link rel="stylesheet" href="css/style_feed.css" />
+    <script src="js/animations.js"></script>
     <link
       rel="shortcut icon"
       href="assets/icons/favicon.ico"
@@ -12,6 +13,8 @@
     />
   </head>
   <body>
+    <img src="assets/imgs/bg-anfield.png" alt="" class="bg_feed_img">
+    <div class="bg_feed_black"></div>
     <main>
       <div class="container">
         <!-- Cabeçalho -->
@@ -29,196 +32,594 @@
             <a href="login.html">Sair</a>
           </div>
         </nav>
-
         <!-- Banner -->
         <div class="banner">
-          <h1>Notícias</h1>
+          <!-- <h1>Notícias</h1> -->
 
           <!-- WIRTZ -->
-          <div class="noticia">
-            <h2>Liverpool vai ao mercado de contratações por Florian Wirtz</h2>
-            <div class="ilustracao wirtz">
-              <!-- <img src=""> -->
-            </div>
-            <div class="manchete">
-              <span>
-                Com o contrato do jogador alemão se aproximando do fim, o clube
-                inglês fez a sondagem pelo jogador alemão. Bayer Leverkusen está
-                disposto a liberar o jogador caso a multa seja atendida. É
-                esperado pelo Bayer Leverkusen um valor em torno de 80 milhões
-                de euros pelo jogador. O Liverpool encara como uma oportunidade
-                de mercado para compor o seu elenco e brigar pela UEFA Champions
-                League e Premier League... <a href="#">Saiba mais</a>
-              </span>
-              <div class="box_likes">
-                <img
-                  src="assets/ilustracoes_noticias/like.png"
-                  alt=""
-                  class="like"
-                  onclick="fnLike()"
-                />
-                <span class="likes_1"></span>
-                <img
-                  src="assets/ilustracoes_noticias/deslike.png"
-                  alt=""
-                  class="deslike"
-                />
-                <span class="deslikes"></span>
+          <div class="noticia fade-in-fwd">
+            <div class="box_manchete">
+              <div class="ilustracao wirtz">
+                <!-- <img src=""> -->
+              </div>
+              <div class="manchete">
+                <h2>
+                  Liverpool vai ao mercado de contratações por Florian Wirtz
+                </h2>
+                <span>
+                  Com o contrato do jogador alemão se aproximando do fim, o
+                  clube inglês fez a sondagem pelo jogador alemão. Bayer
+                  Leverkusen está disposto a liberar o jogador caso a multa seja
+                  atendida. É esperado pelo Bayer Leverkusen um valor em torno
+                  de 80 milhões de euros pelo jogador. O Liverpool encara como
+                  uma oportunidade de mercado para compor o seu elenco e brigar
+                  pela UEFA Champions League e Premier League...
+                  <a href="#">Saiba mais</a>
+                </span>
+                <div class="box_likes">
+                  <img
+                    src="assets/ilustracoes_noticias/like.png"
+                    alt=""
+                    class="like"
+                    onclick="fnLike()"
+                  />
+                  <span class="likes_1"></span>
+                  <img
+                    src="assets/ilustracoes_noticias/deslike.png"
+                    alt=""
+                    class="deslike"
+                  />
+                  <span class="deslikes"></span>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- <hr /> -->
+          <hr class="fade-in-fwd"/>
 
           <!-- SALAH -->
-          <div class="noticia">
-            <h2>
-              Liverpool se aproxima de renovação com Mohamed Salah visando
-              manter estrela no clube por mais três anos
-            </h2>
-            <div class="ilustracao salah">
-              <!-- <img src=""> -->
-            </div>
-            <div class="manchete">
-              <span>
-                O Liverpool está em avançadas negociações para renovar o
-                contrato de Mohamed Salah, um dos maiores astros da equipe. Com
-                o vínculo atual se aproximando do final, o clube busca estender
-                a permanência do atacante egípcio por pelo menos mais três anos.
-                A diretoria vê a renovação de Salah como essencial para as
-                ambições de longo prazo, especialmente para seguir competitivo
-                nas disputas pela Premier League e UEFA Champions League...
-                <a href="#">Saiba mais</a>
-              </span>
-              <div class="box_likes">
-                <img
-                  src="assets/ilustracoes_noticias/like.png"
-                  alt=""
-                  class="like"
-                />
-                <span class="likes_1"></span>
-                <img
-                  src="assets/ilustracoes_noticias/deslike.png"
-                  alt=""
-                  class="deslike"
-                />
-                <span class="deslikes"></span>
+          <div class="noticia fade-in-fwd">
+            <div class="box_manchete">
+              <div class="ilustracao salah">
+                <!-- <img src=""> -->
+              </div>
+              <div class="manchete">
+                <h2>
+                  Liverpool se aproxima de renovação com Mohamed Salah visando
+                  manter estrela no clube por mais três anos
+                </h2>
+                <span>
+                  O Liverpool está em avançadas negociações para renovar o
+                  contrato do egípcio Mohamed Salah. Com o vínculo atual se
+                  aproximando do final, a permanência do atacante por pelo menos
+                  mais três anos. A diretoria vê a renovação como essencial para
+                  as ambições de longo prazo, especialmente para seguir
+                  competitivo nas disputas pela Premier League e UEFA Champions
+                  League...
+                  <a href="#">Saiba mais</a>
+                </span>
+                <div class="box_likes">
+                  <img
+                    src="assets/ilustracoes_noticias/like.png"
+                    alt=""
+                    class="like"
+                  />
+                  <span class="likes_1"></span>
+                  <img
+                    src="assets/ilustracoes_noticias/deslike.png"
+                    alt=""
+                    class="deslike"
+                  />
+                  <span class="deslikes"></span>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- <hr /> -->
+          <hr class="fade-in-fwd"/>
 
           <!-- KONATÉ -->
-          <div class="noticia">
-            <h2>
-              Liverpool confirma lesão de Ibrahima Konaté, que desfalcará o time
-              nas próximas semanas
-            </h2>
-            <div class="ilustracao konate">
-              <!-- <img src=""> -->
-            </div>
-            <div class="manchete">
-              <span>
-                O Liverpool sofreu um duro golpe com a notícia de que o zagueiro
-                Ibrahima Konaté está lesionado e ficará fora dos gramados nas
-                próximas semanas. Konaté, peça fundamental no sistema defensivo
-                do técnico Arne Slot, sofreu uma lesão muscular durante o último
-                jogo do time na Premier League e já iniciou o tratamento sob a
-                supervisão da equipe médica do clube....
-                <a href="#">Saiba mais</a>
-              </span>
-              <div class="box_likes">
-                <img
-                  src="assets/ilustracoes_noticias/like.png"
-                  alt=""
-                  class="like"
-                />
-                <span class="likes"></span>
-                <img
-                  src="assets/ilustracoes_noticias/deslike.png"
-                  alt=""
-                  class="deslike"
-                />
-                <span class="deslikes"></span>
+          <div class="noticia fade-in-fwd">
+            <div class="box_manchete">
+              <div class="ilustracao konate">
+                <!-- <img src=""> -->
+              </div>
+              <div class="manchete">
+                <h2>
+                  Liverpool confirma lesão de Ibrahima Konaté, que desfalcará o
+                  time nas próximas semanas
+                </h2>
+                <span>
+                  O Liverpool sofreu um duro golpe com a notícia de que o
+                  zagueiro Ibrahima Konaté está lesionado e ficará fora dos
+                  gramados nas próximas semanas. Konaté, peça fundamental no
+                  sistema defensivo do técnico Arne Slot, sofreu uma lesão
+                  muscular durante o último jogo do time na Premier League e já
+                  iniciou o tratamento sob a supervisão da equipe médica do
+                  clube....
+                  <a href="#">Saiba mais</a>
+                </span>
+                <div class="box_likes">
+                  <img
+                    src="assets/ilustracoes_noticias/like.png"
+                    alt=""
+                    class="like"
+                  />
+                  <span class="likes"></span>
+                  <img
+                    src="assets/ilustracoes_noticias/deslike.png"
+                    alt=""
+                    class="deslike"
+                  />
+                  <span class="deslikes"></span>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- <hr /> -->
+          <hr class="fade-in-fwd"/>
 
           <!-- MURILLO -->
-          <div class="noticia">
-            <h2>
-              Liverpool anuncia a contratação de Murillo, zagueiro do Nottingham
-              Forest, para reforçar a defesa
-            </h2>
-            <div class="ilustracao murillo">
-              <!-- <img src=""> -->
-            </div>
-            <div class="manchete">
-              <span>
-                O Liverpool oficializou a contratação do zagueiro brasileiro
-                Murillo, que vinha se destacando no Nottingham Forest. A chegada
-                do defensor é parte do plano do técnico Arne Slot para reforçar
-                o setor defensivo da equipe e ampliar as opções para a sequência
-                da Premier League e da UEFA Champions League. O clube inglês
-                investiu cerca de 40 milhões de euros na transferência do
-                jogador, que já realizou exames médicos e deve se juntar ao
-                elenco nos próximos dias.... <a href="#">Saiba mais</a>
-              </span>
-              <div class="box_likes">
-                <img
-                  src="assets/ilustracoes_noticias/like.png"
-                  alt=""
-                  class="like"
-                />
-                <span class="likes"></span>
-                <img
-                  src="assets/ilustracoes_noticias/deslike.png"
-                  alt=""
-                  class="deslike"
-                />
-                <span class="deslikes"></span>
+          <div class="noticia fade-in-fwd">
+            <div class="box_manchete">
+              <div class="ilustracao murillo">
+                <!-- <img src=""> -->
+              </div>
+              <div class="manchete">
+                <h2>
+                  Liverpool anuncia a contratação de Murillo, zagueiro do
+                  Nottingham Forest, para reforçar a defesa
+                </h2>
+                <span>
+                  O Liverpool oficializou a contratação do zagueiro brasileiro
+                  Murillo, que vinha se destacando no Nottingham Forest. A
+                  chegada do defensor é parte do plano do técnico Arne Slot para
+                  reforçar o setor defensivo da equipe. O clube investiu cerca
+                  de 40 milhões de euros na transferência do jogador, que já
+                  realizou exames médicos e deve se juntar ao elenco nos
+                  próximos dias.... <a href="#">Saiba mais</a>
+                </span>
+                <div class="box_likes">
+                  <img
+                    src="assets/ilustracoes_noticias/like.png"
+                    alt=""
+                    class="like"
+                  />
+                  <span class="likes"></span>
+                  <img
+                    src="assets/ilustracoes_noticias/deslike.png"
+                    alt=""
+                    class="deslike"
+                  />
+                  <span class="deslikes"></span>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- <hr /> -->
+          <hr class="fade-in-fwd"/>
 
           <!-- ALEXANDER-ARNOLD -->
-          <div class="noticia">
-            <h2>
-              Liverpool acerta renovação de contrato de Trent Alexander-Arnold
-              até 2028
-            </h2>
-            <div class="ilustracao alexander">
-              <!-- <img src=""> -->
+          <div class="noticia fade-in-fwd">
+            <div class="box_manchete">
+              <div class="ilustracao alexander">
+                <!-- <img src=""> -->
+              </div>
+              <div class="manchete">
+                <h2>
+                  Liverpool acerta renovação de contrato de Trent
+                  Alexander-Arnold até 2028
+                </h2>
+                <span>
+                  O Liverpool anunciou oficialmente a renovação do contrato de
+                  Trent Alexander-Arnold, um dos principais nomes do elenco e
+                  ídolo da torcida, até 2028. A extensão do vínculo com o
+                  lateral-direito de 25 anos foi concluída após meses de
+                  negociação e representa um compromisso de longo prazo entre o
+                  jogador e o clube. Com a renovação, o Liverpool pretende
+                  manter Alexander-Arnold como peça central do projeto comandado
+                  pelo técnico Arne Slot.... <a href="#">Saiba mais</a>
+                </span>
+                <div class="box_likes">
+                  <img
+                    src="assets/ilustracoes_noticias/like.png"
+                    alt=""
+                    class="like"
+                  />
+                  <div class="likes"></div>
+                  <img
+                    src="assets/ilustracoes_noticias/deslike.png"
+                    alt=""
+                    class="deslike"
+                  />
+                  <span class="deslikes"></span>
+                </div>
+              </div>
             </div>
-            <div class="manchete">
-              <span>
-                O Liverpool anunciou oficialmente a renovação do contrato de
-                Trent Alexander-Arnold, um dos principais nomes do elenco e
-                ídolo da torcida, até 2028. A extensão do vínculo com o
-                lateral-direito de 25 anos foi concluída após meses de
-                negociação e representa um compromisso de longo prazo entre o
-                jogador e o clube. Com a renovação, o Liverpool pretende manter
-                Alexander-Arnold como peça central do projeto comandado pelo
-                técnico Arne Slot.... <a href="#">Saiba mais</a>
-              </span>
-              <div class="box_likes">
-                <img
-                  src="assets/ilustracoes_noticias/like.png"
-                  alt=""
-                  class="like"
-                />
-                <div class="likes"></div>
-                <img
-                  src="assets/ilustracoes_noticias/deslike.png"
-                  alt=""
-                  class="deslike"
-                />
-                <span class="deslikes"></span>
+          </div>
+
+          <hr class="fade-in-fwd"/>
+
+          <!-- RUMOR DE TRANSFERÊNCIA -->
+          <div class="noticia fade-in-fwd">
+            <div class="box_manchete">
+              <div class="ilustracao gyokeres">
+                <!-- <img src=""> -->
+              </div>
+              <div class="manchete">
+                <h2>
+                  Liverpool está interessado na contratação do atacante Viktor
+                  Gyokeres
+                </h2>
+                <span>
+                  Gyokeres é conhecido por sua habilidade de finalização e
+                  presença física, tem se destacado no futebol português,
+                  atraindo a atenção de grandes clubes europeus. Fontes próximas
+                  ao clube inglês sugerem que o técnico Arne Slot vê em Gyokeres
+                  a peça ideal para reforçar o ataque dos Reds na próxima
+                  temporada. A negociação ainda está em fases iniciais, mas a
+                  expectativa é alta entre os torcedores para a possível chegada
+                  do atacante sueco... <a href="#">Saiba mais</a>
+                </span>
+                <div class="box_likes">
+                  <img
+                    src="assets/ilustracoes_noticias/like.png"
+                    alt=""
+                    class="like"
+                  />
+                  <div class="likes"></div>
+                  <img
+                    src="assets/ilustracoes_noticias/deslike.png"
+                    alt=""
+                    class="deslike"
+                  />
+                  <span class="deslikes"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="fade-in-fwd"/>
+
+          <div class="noticia fade-in-fwd">
+            <div class="box_manchete">
+              <div class="ilustracao szoboszlai">
+                <!-- <img src=""> -->
+              </div>
+              <div class="manchete">
+                <h2>
+                  Liverpool pode vender Dominik Szoboszlai para o Bayern de
+                  Munique
+                </h2>
+                <span>
+                  Szoboszlai tem atraído interesse de vários clubes, sendo o
+                  Bayern o mais recente a manifestar um forte interesse. Fontes
+                  próximas ao clube alemão sugerem que as negociações estão em
+                  andamento e que uma oferta oficial pode ser feita em breve. A
+                  possível transferência de Szoboszlai seria uma grande perda
+                  para o Liverpool, mas uma oportunidade significativa para o
+                  jogador se destacar na Bundesliga...
+                  <a href="#">Saiba mais</a>
+                </span>
+                <div class="box_likes">
+                  <img
+                    src="assets/ilustracoes_noticias/like.png"
+                    alt=""
+                    class="like"
+                  />
+                  <div class="likes"></div>
+                  <img
+                    src="assets/ilustracoes_noticias/deslike.png"
+                    alt=""
+                    class="deslike"
+                  />
+                  <span class="deslikes"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="fade-in-fwd"/>
+
+          <div class="noticia fade-in-fwd">
+            <div class="box_manchete">
+              <div class="ilustracao rodrygo">
+                <!-- <img src=""> -->
+              </div>
+              <div class="manchete">
+                <h2>
+                  Liverpool anuncia a contratação de Rodrygo, ex-Real Madrid
+                </h2>
+                <span>
+                  O Liverpool surpreendeu o mercado de transferências ao
+                  anunciar a contratação do atacante brasileiro Rodrygo, que
+                  estava no Real Madrid. Rodrygo chega para reforçar o elenco
+                  dos Reds na próxima temporada. A transferência foi concluída
+                  após intensas negociações entre os clubes, e Rodrygo assinou
+                  um contrato de longo prazo com o Liverpool. A expectativa é
+                  que ele se torne uma peça-chave no ataque sob o comando do
+                  técnico Arne Slot... <a href="#">Saiba mais</a>
+                </span>
+                <div class="box_likes">
+                  <img
+                    src="assets/ilustracoes_noticias/like.png"
+                    alt=""
+                    class="like"
+                  />
+                  <div class="likes"></div>
+                  <img
+                    src="assets/ilustracoes_noticias/deslike.png"
+                    alt=""
+                    class="deslike"
+                  />
+                  <span class="deslikes"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="fade-in-fwd"/>
+
+          <div class="noticia fade-in-fwd">
+            <div class="box_manchete">
+              <div class="ilustracao zubimendi">
+                <!-- <img src=""> -->
+              </div>
+              <div class="manchete">
+                <h2>
+                  Liverpool está interessado na contratação de Martín Zubimendi
+                  da Real Sociedad
+                </h2>
+                <span>
+                  Zubimendi, despertou o interesse do técnico Arne Slot, que
+                  busca reforçar o elenco para a próxima temporada. Fontes
+                  próximas ao clube espanhol sugerem que as negociações
+                  preliminares já começaram e que o Liverpool pode fazer uma
+                  oferta oficial em breve. A possível chegada de Zubimendi é
+                  vista com entusiasmo pelos torcedores dos Reds...
+                  <a href="#">Saiba mais</a>
+                </span>
+                <div class="box_likes">
+                  <img
+                    src="assets/ilustracoes_noticias/like.png"
+                    alt=""
+                    class="like"
+                  />
+                  <div class="likes"></div>
+                  <img
+                    src="assets/ilustracoes_noticias/deslike.png"
+                    alt=""
+                    class="deslike"
+                  />
+                  <span class="deslikes"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="fade-in-fwd"/>
+
+          <div class="noticia fade-in-fwd">
+            <div class="box_manchete">
+              <div class="ilustracao marmoush">
+                <!-- <img src=""> -->
+              </div>
+              <div class="manchete">
+                <h2>
+                  Liverpool contrata o atacante Omar Marmoush do Frankfurt
+                </h2>
+                <span>
+                  O Liverpool anunciou oficialmente a contratação do atacante
+                  Omar Marmoush, que estava no Eintracht Frankfurt. Marmoush, de
+                  25 anos, chega para adicionar mais potência ao ataque dos Reds
+                  na próxima temporada. A transferência foi concluída após
+                  negociações intensas entre os dois clubes, e Marmoush assinou
+                  um contrato de longo prazo com o Liverpool. A expectativa é
+                  que ele traga uma nova dinâmica ao ataque sob o comando do
+                  técnico Arne Slot... <a href="#">Saiba mais</a>
+                </span>
+                <div class="box_likes">
+                  <img
+                    src="assets/ilustracoes_noticias/like.png"
+                    alt=""
+                    class="like"
+                  />
+                  <div class="likes"></div>
+                  <img
+                    src="assets/ilustracoes_noticias/deslike.png"
+                    alt=""
+                    class="deslike"
+                  />
+                  <span class="deslikes"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="fade-in-fwd"/>
+
+          <div class="noticia fade-in-fwd">
+            <div class="box_manchete">
+              <div class="ilustracao darwin">
+                <!-- <img src=""> -->
+              </div>
+              <div class="manchete">
+                <h2>Liverpool confirma a venda do atacante Darwin Nuñez</h2>
+                <span>
+                  O Liverpool anunciou oficialmente a venda do atacante uruguaio
+                  Darwin Nuñez. Nuñez, que teve uma passagem marcante pelo
+                  Liverpool com gols importantes, irá se juntar ao time da La
+                  Liga, Sevilla, na próxima janela de transferências. A
+                  negociação foi concluída com um acordo financeiro
+                  significativo, e a saída de Nuñez marca o fim de uma era para
+                  o jogador nos Reds, enquanto o clube busca novas opções para
+                  reforçar seu ataque...
+                  <a href="#">Saiba mais</a>
+                </span>
+                <div class="box_likes">
+                  <img
+                    src="assets/ilustracoes_noticias/like.png"
+                    alt=""
+                    class="like"
+                  />
+                  <div class="likes"></div>
+                  <img
+                    src="assets/ilustracoes_noticias/deslike.png"
+                    alt=""
+                    class="deslike"
+                  />
+                  <span class="deslikes"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="fade-in-fwd"/>
+
+          <div class="noticia fade-in-fwd">
+            <div class="box_manchete">
+              <div class="ilustracao virgil_lesao">
+                <!-- <img src=""> -->
+              </div>
+              <div class="manchete">
+                <h2>Virgil Van Dijk sofre lesão e preocupa o Liverpool</h2>
+                <span>
+                  O Liverpool anunciou que o zagueiro Virgil Van Dijk sofreu uma
+                  lesão durante a partida contra o Manchester City. A lesão, que
+                  ocorreu no primeiro tempo do jogo, deixou a torcida e a equipe
+                  médica apreensivas quanto à recuperação do defensor holandês.
+                  Van Dijk passará por exames detalhados para avaliar a
+                  gravidade da lesão e determinar o tempo de recuperação.
+                  <a href="#">Saiba mais</a>
+                </span>
+                <div class="box_likes">
+                  <img
+                    src="assets/ilustracoes_noticias/like.png"
+                    alt=""
+                    class="like"
+                  />
+                  <div class="likes"></div>
+                  <img
+                    src="assets/ilustracoes_noticias/deslike.png"
+                    alt=""
+                    class="deslike"
+                  />
+                  <span class="deslikes"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="fade-in-fwd"/>
+
+          <div class="noticia fade-in-fwd">
+            <div class="box_manchete">
+              <div class="ilustracao fases">
+                <!-- <img src=""> -->
+              </div>
+              <div class="manchete">
+                <h2>
+                  Liverpool conhece seus adversários na fase de grupos da UEFA
+                  Champions League
+                </h2>
+                <span>
+                  O sorteio colocou os Reds em um grupo desafiador, ao lado de
+                  equipes como Real Madrid, Borussia Dortmund e Napoli. Os jogos
+                  prometem ser emocionantes, com grandes expectativas para o
+                  desempenho do Liverpool nesta temporada europeia. O técnico
+                  Arne Slot está confiante de que sua equipe poderá superar as
+                  dificuldades e avançar para as fases eliminatórias do
+                  torneio...
+                  <a href="#">Saiba mais</a>
+                </span>
+                <div class="box_likes">
+                  <img
+                    src="assets/ilustracoes_noticias/like.png"
+                    alt=""
+                    class="like"
+                  />
+                  <div class="likes"></div>
+                  <img
+                    src="assets/ilustracoes_noticias/deslike.png"
+                    alt=""
+                    class="deslike"
+                  />
+                  <span class="deslikes"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="fade-in-fwd"/>
+
+          <div class="noticia fade-in-fwd">
+            <div class="box_manchete">
+              <div class="ilustracao gomez">
+                <!-- <img src=""> -->
+              </div>
+              <div class="manchete">
+                <h2>Liverpool confirma venda do defensor Joe Gomez</h2>
+                <span>
+                  O Liverpool anunciou oficialmente a venda do defensor Joe
+                  Gomez. Após várias temporadas defendendo as cores dos Reds,
+                  Gomez está se transferindo para o Aston Villa em uma
+                  negociação significativa. O jogador de 27 anos seguirá para o
+                  clube de Birmingham na próxima janela de transferências. Esta
+                  mudança marca o fim de uma era para Gomez em Anfield, enquanto
+                  o Liverpool busca reforços para a posição...
+                  <a href="#">Saiba mais</a>
+                </span>
+                <div class="box_likes">
+                  <img
+                    src="assets/ilustracoes_noticias/like.png"
+                    alt=""
+                    class="like"
+                  />
+                  <div class="likes"></div>
+                  <img
+                    src="assets/ilustracoes_noticias/deslike.png"
+                    alt=""
+                    class="deslike"
+                  />
+                  <span class="deslikes"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="fade-in-fwd"/>
+
+          <div class="noticia fade-in-fwd">
+            <div class="box_manchete">
+              <div class="ilustracao jota">
+                <!-- <img src=""> -->
+              </div>
+              <div class="manchete">
+                <h2>Liverpool anuncia a venda do atacante Diogo Jota</h2>
+                <span>
+                  O Liverpool confirmou a venda do atacante Diogo Jota para o
+                  Atlético de Madrid. O português está de partida para a La Liga
+                  na próxima janela de transferências. A transferência do
+                  jogador português de 27 anos foi finalizada após negociações
+                  intensas, e ele deixa o Liverpool após uma passagem memorável
+                  pelo clube. A saída de Jota abre espaço para novas
+                  contratações e mudanças no ataque dos Reds...
+                  <a href="#">Saiba mais</a>
+                </span>
+                <div class="box_likes">
+                  <img
+                    src="assets/ilustracoes_noticias/like.png"
+                    alt=""
+                    class="like"
+                  />
+                  <div class="likes"></div>
+                  <img
+                    src="assets/ilustracoes_noticias/deslike.png"
+                    alt=""
+                    class="deslike"
+                  />
+                  <span class="deslikes"></span>
+                </div>
               </div>
             </div>
           </div>
