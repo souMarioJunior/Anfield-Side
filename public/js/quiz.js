@@ -960,7 +960,17 @@ function escolher(opcao) {
       pontos += 10;
     } else if (pontos > 0) {
       pontos -= 10;
+
     }
+
+    if(pontos == 0) {
+      var jogo = document.getElementById("box_jogo");
+      var resultado = document.getElementById("div_resultado");
+      jogo.style.display = "none";
+      resultado.style.display = "flex";
+      resultado.innerHTML = `Não foi dessa vez :C`
+    }
+
     contador++;
     pontuacao.innerHTML = `<h1>Sua pontuação atual: ${pontos}</h2>`;
     renderizarPergunta();

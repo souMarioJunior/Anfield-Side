@@ -76,6 +76,7 @@ h1 {
   color: white;
   text-decoration: none;
   font-weight: 400;
+  transition: color 0.4s;
 }
 
 .group_li a:hover {
@@ -112,6 +113,7 @@ li {
   padding: 0 2rem;
   color: white;
   font-weight: 600;
+  transition: color 0.4s;
 }
 
 .sair a:hover {
