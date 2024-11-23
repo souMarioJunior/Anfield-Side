@@ -114,6 +114,7 @@ h1 {
   color: white;
   text-decoration: none;
   font-weight: 400;
+  transition: color 0.4s;
 }
 
 .group_li a:hover {
@@ -150,6 +151,7 @@ li {
   padding: 0 2rem;
   color: white;
   font-weight: 600;
+  transition: color 0.4s;
 }
 
 .sair a:hover {
@@ -238,7 +240,8 @@ li {
 .btns_game {
   padding: 2rem 0;
   width: 45%;
-  opacity: 0.9;
+  opacity: 0.8;
+  transition: opacity 0.4s;
 }
 
 .btns_game:hover {
@@ -253,7 +256,8 @@ li {
 }
 
 .box_infos button {
-  opacity: 0.9;
+  opacity: 0.8;
+  transition: opacity 0.4s;
 }
 
 .box_infos button:hover {

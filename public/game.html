@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/quiz.js"></script>
     <title>Game | Anfield Side</title>
     <link rel="stylesheet" href="css/style_game.css" />
     <link
@@ -34,7 +35,7 @@
 
         <!-- Banner -->
         <div class="banner">
-          <div style="display: none" class="box_infos">
+          <div style="display: flex" class="box_infos fade-in-top">
             <div class="saudacao">
               <h1>Saudações,</h1>
               <span class="nome">Mário Junior 👋</span>
@@ -47,16 +48,18 @@
               estará entre os melhores, não é mesmo? 👀</span
             >
             <br /><br />
-            <button onclick="jogar()">Veremos... Desafio aceito! 🔥</button>
+            <button class="btn_jogar" onclick="jogar()">Veremos... Desafio aceito! 🔥</button>
           </div>
 
-          
-          <div class="box_jogo" style="display: flex;">
-            <h1 class="num_questao">01</h1>
-            <h1 class="num_camisa">Camisa: 66</h1>
-            <h1 class="num_ano">Ano: 2019</h1>
-            <h1 class="quem">O jogador é...</h1>
-            <div class="box_opcoes">
+
+          <div class="box_jogo" style="display: none;">
+            <div class="enunciado fade-in-top">
+              <h1 class="num_questao">01</h1>
+              <h1 class="num_camisa">Camisa: 66</h1>
+              <h1 class="num_ano">Ano: 2019</h1>
+              <h1 class="quem">O jogador é...</h1>
+            </div>
+            <div class="box_opcoes fade-in-top">
               <div class="linha_01">
                 <button class="btns_game btn_opt_1" onclick="proximaPergunta()">Divock Origi</button>
                 <button class="btns_game btn_opt_2" onclick="proximaPergunta()">Alex-Oxlade</button>
