@@ -917,7 +917,7 @@ footer {
 }
 
 .faca_parte {
-  transition: border 0.4s;
+  /* transition: border 0.4s; */
   transition: transform 0.4s;
 }
 

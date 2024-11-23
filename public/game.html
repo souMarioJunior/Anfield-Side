@@ -35,7 +35,7 @@
 
         <!-- Banner -->
         <div class="banner">
-          <div style="display: flex" class="box_infos fade-in-top">
+          <div id="box_infos" style="display: flex" class="box_infos fade-in-top">
             <div class="saudacao">
               <h1>Saudações,</h1>
               <span class="nome">Mário Junior 👋</span>
@@ -52,23 +52,26 @@
           </div>
 
 
-          <div class="box_jogo" style="display: none;">
+          <div id="box_jogo" class="box_jogo" style="display: none;">
             <div class="enunciado fade-in-top">
-              <h1 class="num_questao">01</h1>
-              <div class="pergunta"></div>
+              <h1 id="num_questao" class="num_questao"></h1>
+              <div id="pergunta" class="pergunta">
+                <h2 id="h2_pergunta"></h2>
+              </div>
             </div>
-            <div class="box_opcoes fade-in-top">
-              <div class="linha_01">
-                <button class="btns_game btn_opt_1" onclick="proximaPergunta()">Divock Origi</button>
-                <button class="btns_game btn_opt_2" onclick="proximaPergunta()">Alex-Oxlade</button>
+            <div id="box_opcoes" class="box_opcoes fade-in-top">
+                <button id="a" class="btns_game btn_opt_1" onclick="escolher('a')"></button>
+                <button id="b" class="btns_game btn_opt_2" onclick="escolher('b')"></button>
+                <button id="c" class="btns_game btn_opt_3" onclick="escolher('c')"></button>
+                <button id="d" class="btns_game btn_opt_4" onclick="escolher('d')"></button>
               </div>
-              <div class="linha_02">
-                <button class="btns_game btn_opt_3" onclick="proximaPergunta()">Fabinho</button>
-                <button class="btns_game btn_opt_4" onclick="proximaPergunta()">Alexander-Arnold</button>
-              </div>
+              <br><br>
+              <div id="pontuacao"></div>
             </div>
           </div>
-        </div>
+          <div id="div_resultado" style="display: none;">
+
+          </div>
       </div>
     </main>
   </body>
