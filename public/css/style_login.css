@@ -103,6 +103,7 @@ li {
   padding: 0 2rem;
   color: white;
   font-weight: 600;
+  transition: color 0.4s;
 }
 
 .cadLog a:hover {
@@ -227,7 +228,8 @@ button {
     font-size: xx-large;
     font-weight: 500;
     cursor: pointer;
-    opacity: 0.9;
+    opacity: 0.8;
+    transition: opacity 0.4s;
 }
 
 button:hover {
