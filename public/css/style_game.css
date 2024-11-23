@@ -374,6 +374,10 @@ option {
     background-color: black;
 }
 
+#h2_pergunta {
+  text-align: center;
+}
+
 button {
     width: 100%;
     padding: 1rem 0;

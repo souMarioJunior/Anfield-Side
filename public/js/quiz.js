@@ -931,6 +931,7 @@ var contador = 0;
 var pontos = 0;
 
 function renderizarPergunta() {
+  var numero_questao = document.getElementById("num_questao");
   var renderizar_pergunta = document.getElementById("h2_pergunta");
   var btn_a = document.getElementById("a");
   var btn_b = document.getElementById("b");
@@ -938,6 +939,7 @@ function renderizarPergunta() {
   var btn_d = document.getElementById("d");
   var pontuacao = document.getElementById("pontuacao");
 
+  numero_questao.innerHTML = contador + 1
   renderizar_pergunta.innerHTML =
     todas_as_perguntas[lista_perguntas_aleatorias[contador]].pergunta;
   btn_a.innerHTML =
