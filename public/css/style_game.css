@@ -16,6 +16,22 @@ body {
   background-color: #0A0A0A;
 }
 
+.bg_feed_img {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: -2;
+  filter: grayscale(0.9);
+}
+
+.bg_feed_black {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -150,6 +166,83 @@ li {
     align-items: center;
     justify-content: center;
     align-items: center;
+}
+
+.box_jogo {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  /* border: solid red; */
+  height: 100vh;
+  width: 100%;
+}
+
+.num_questao {
+  /* border: solid; */
+  height: fit-content;
+  width: 100%;
+  font-size: 100px;
+  font-weight: 900;
+  text-align: center;
+  justify-content: center;
+}
+
+.num_camisa {
+  /* border: solid; */
+  height: fit-content;
+  width: 100%;
+  font-size: 60px;
+  font-weight: 600;
+  text-align: center;
+  justify-content: center;
+}
+
+.num_ano {
+  /* border: solid; */
+  height: fit-content;
+  width: 100%;
+  font-size: 60px;
+  font-weight: 600;
+  text-align: center;
+  justify-content: center;
+}
+
+.quem {
+  /* border: solid; */
+  height: fit-content;
+  width: 100%;
+  font-size: 60px;
+  font-weight: 600;
+  text-align: center;
+  justify-content: center;
+}
+
+.box_opcoes {
+  display: flex;
+  flex-direction: column;  
+  /* border: solid; */
+  width: 100%;
+  /* padding: 5rem 0; */
+}
+
+.linha_01, .linha_02 {
+  display: flex;
+  /* flex-direction: column; */
+  width: 100%;
+  /* border: solid; */
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.btns_game {
+  padding: 2rem 0;
+  width: 45%;
+  opacity: 0.9;
+}
+
+.btns_game:hover {
+  opacity: 1;
 }
 
 .box_infos {

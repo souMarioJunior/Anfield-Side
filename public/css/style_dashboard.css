@@ -16,6 +16,22 @@ body {
   background-color: #0A0A0A;
 }
 
+.bg_feed_img {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: -2;
+  filter: grayscale(0.9);
+}
+
+.bg_feed_black {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 main {
   display: flex;
   flex-direction: column;

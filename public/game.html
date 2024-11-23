@@ -12,6 +12,8 @@
     />
   </head>
   <body>
+    <img src="assets/imgs/bg-anfield.png" alt="" class="bg_feed_img" />
+    <div class="bg_feed_black"></div>
     <main>
       <div class="container">
         <!-- Cabeçalho -->
@@ -32,11 +34,9 @@
 
         <!-- Banner -->
         <div class="banner">
-          <div class="box_infos">
+          <div style="display: none" class="box_infos">
             <div class="saudacao">
-              <h1>
-                Saudações,
-              </h1>
+              <h1>Saudações,</h1>
               <span class="nome">Mário Junior 👋</span>
             </div>
             <br />
@@ -46,11 +46,43 @@
               suba no rank de conhecimento sobre o Liverpool. Com certeza você
               estará entre os melhores, não é mesmo? 👀</span
             >
-            <br><br>
-            <button>Veremos... Desafio aceito! 🔥</button>
+            <br /><br />
+            <button onclick="jogar()">Veremos... Desafio aceito! 🔥</button>
+          </div>
+          <div class="box_jogo">
+            <h1 class="num_questao">01</h1>
+            <h1 class="num_camisa">Camisa: 66</h1>
+            <h1 class="num_ano">Ano: 2019</h1>
+            <h1 class="quem">O jogador é...</h1>
+            <div class="box_opcoes">
+              <div class="linha_01">
+                <button class="btns_game btn_opt_1" onclick="proximaPergunta()">Divock Origi</button>
+                <button class="btns_game btn_opt_2" onclick="proximaPergunta()">Alex-Oxlade</button>
+              </div>
+              <div class="linha_02">
+                <button class="btns_game btn_opt_3" onclick="proximaPergunta()">Fabinho</button>
+                <button class="btns_game btn_opt_4" onclick="proximaPergunta()">Alexander-Arnold</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </main>
   </body>
 </html>
+
+<script>
+  function jogar() {
+    var enunciado = document.querySelector(".box_infos");
+    var quiz = (enunciado.style.display = "none");
+  }
+
+  function proximaPergunta() {
+    var escolha_1 = document.querySelector(".btn_opt_1").value;
+    var escolha_2 = document.querySelector(".btn_opt_2").value;
+    var escolha_3 = document.querySelector(".btn_opt_3").value;
+    var escolha_4 = document.querySelector(".btn_opt_4").value;
+
+
+  }
+</script>
