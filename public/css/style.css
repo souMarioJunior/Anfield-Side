@@ -69,6 +69,7 @@ h1 {
   color: white;
   text-decoration: none;
   font-weight: 400;
+  transition: color 0.4s;
 }
 
 .group_li a:hover {
@@ -105,6 +106,7 @@ li {
   padding: 0 2rem;
   color: white;
   font-weight: 600;
+  transition: color 0.4s;
 }
 
 .cadLog a:hover {
@@ -724,6 +726,12 @@ a {
 }
 
 .btn_up {
+  color: white;
+  text-decoration: none;
+  /* transition: transform 0.5s; */
+}
+
+.box_btn_up {
   display: flex;
   height: 100px;
   width: 100px;
@@ -738,12 +746,22 @@ a {
   text-decoration: none;
   color: white;
   font-size: 50px;
-  opacity: 0.6;
+  opacity: 0.8;
   font-weight: bolder;
   box-shadow: 5px 5px 0px #791111;
   text-shadow: 7px 3px 0 #791111;
   z-index: 4;
+  transition: transform 0.4s;
 }
+
+.box_btn_up:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* .box_btn_up:hover {
+  transition: scale(2, 2);
+} */
 
 footer {
   display: flex;
@@ -898,7 +916,13 @@ footer {
   background: #dc2626;
 }
 
+.faca_parte {
+  transition: border 0.4s;
+  transition: transform 0.4s;
+}
+
 .faca_parte:hover {
   /* color: #dc2626; */
   border: #dc2626 solid 5px;
+  transform: scale(1.1);
 }
