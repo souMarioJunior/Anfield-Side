@@ -76,6 +76,10 @@ h1 {
   align-items: center;
 }
 
+#div_resultado .parabens {
+  font-size: 40px;
+}
+
 #div_resultado button {
   font-size: 48px;
   opacity: 0.8;

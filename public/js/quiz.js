@@ -956,6 +956,8 @@ function renderizarPergunta() {
 }
 
 function escolher(opcao) {
+        var acertos_pergunta = 'perguntas'
+      var erros_pergunta = 'perguntas'
   if (contador < todas_as_perguntas.length - 1) {
     if (
       opcao == todas_as_perguntas[lista_perguntas_aleatorias[contador]].correta
@@ -977,8 +979,6 @@ function escolher(opcao) {
     if(pontos == 0) {
       var jogo = document.getElementById("box_jogo");
       var resultado = document.getElementById("div_resultado");
-      var acertos_pergunta = 'perguntas'
-      var erros_pergunta = 'perguntas'
 
       if(acertos == 1) {
         acertos_pergunta = 'pergunta'
@@ -1009,6 +1009,16 @@ function escolher(opcao) {
     var resultado = document.getElementById("div_resultado");
     jogo.style.display = "none";
     resultado.style.display = "flex";
+    resultado.innerHTML = `
+    <h1 style="parabens">Wow! Você é realmente incrível 🤩</h1>
+    <h1>Resumo do jogo:</h1>
+    <span>Você chegou até a pergunta: ${contador + 1}</span>
+    <span>Você fez ${max_pontos} pontos nessa partida</span>
+    <span>Você acertou ${acertos} ${acertos_pergunta}</span>
+    <span>Você errou ${erros} ${erros_pergunta}</span>
+    <br><br>
+    <button onclick="reiniciarQuiz()">Reiniciar quiz</button>
+    `
   }
 }
 
