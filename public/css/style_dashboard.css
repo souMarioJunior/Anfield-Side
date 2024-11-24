@@ -88,6 +88,7 @@ span {
   color: white;
   text-decoration: none;
   font-weight: 400;
+  transition: color 0.4s;
 }
 
 .group_li a:hover {
@@ -124,6 +125,7 @@ li {
   padding: 0 2rem;
   color: white;
   font-weight: 600;
+  transition: color 0.4s;
 }
 
 .sair a:hover {
@@ -254,6 +256,8 @@ button, .btn {
     cursor: pointer;
     text-align: center;
     opacity: 0.8;
+    text-decoration: none;
+    transition: opacity 0.4s;
 }
 
 .btn:hover {

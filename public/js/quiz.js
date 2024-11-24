@@ -929,6 +929,9 @@ function jogar() {
 
 var contador = 0;
 var pontos = 0;
+var acertos = 0;
+var erros = 0;
+var max_pontos = 0;
 
 function renderizarPergunta() {
   var numero_questao = document.getElementById("num_questao");
@@ -958,17 +961,43 @@ function escolher(opcao) {
       opcao == todas_as_perguntas[lista_perguntas_aleatorias[contador]].correta
     ) {
       pontos += 10;
+      acertos++
+
+      if(pontos > max_pontos) {
+        max_pontos = pontos;
+      }
     } else if (pontos > 0) {
       pontos -= 10;
-
+    }
+    
+    if (opcao != todas_as_perguntas[lista_perguntas_aleatorias[contador]].correta) {
+      erros++
     }
 
     if(pontos == 0) {
       var jogo = document.getElementById("box_jogo");
       var resultado = document.getElementById("div_resultado");
+      var acertos_pergunta = 'perguntas'
+      var erros_pergunta = 'perguntas'
+
+      if(acertos == 1) {
+        acertos_pergunta = 'pergunta'
+      }
+
+      if(erros == 1) {
+        erros_pergunta = 'pergunta'
+      }
       jogo.style.display = "none";
       resultado.style.display = "flex";
-      resultado.innerHTML = `Não foi dessa vez :C`
+      resultado.innerHTML = `
+      <h1>Resumo do jogo:</h1>
+      <span>Você chegou até a pergunta: ${contador + 1}</span>
+      <span>Você fez ${max_pontos} pontos nessa partida</span>
+      <span>Você acertou ${acertos} ${acertos_pergunta}</span>
+      <span>Você errou ${erros} ${erros_pergunta}</span>
+      <br><br>
+      <button onclick="reiniciarQuiz()">Reiniciar quiz</button>
+      `
     }
 
     contador++;
@@ -981,4 +1010,8 @@ function escolher(opcao) {
     jogo.style.display = "none";
     resultado.style.display = "flex";
   }
+}
+
+function reiniciarQuiz() {
+  window.location.reload();
 }
