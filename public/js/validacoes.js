@@ -59,6 +59,7 @@ function mostrarErrosCadastroSenha() {
     document.getElementById("campo_senha").style.border = "solid #dc2626 thin";
     document.getElementById("campo_senha").style.borderRadius = "4px";
     document.getElementById("erro_senha").style.display = "block";
+    
 
     console.log(senha < 8);
   } else {

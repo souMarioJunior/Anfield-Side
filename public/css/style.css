@@ -728,10 +728,6 @@ a {
 .btn_up {
   color: white;
   text-decoration: none;
-  /* transition: transform 0.5s; */
-}
-
-.box_btn_up {
   display: flex;
   height: 100px;
   width: 100px;
@@ -752,9 +748,12 @@ a {
   text-shadow: 7px 3px 0 #791111;
   z-index: 4;
   transition: transform 0.4s;
+  /* transition: transform 0.5s; */
 }
 
-.box_btn_up:hover {
+
+
+.btn_up:hover {
   opacity: 1;
   transform: scale(1.2);
 }
