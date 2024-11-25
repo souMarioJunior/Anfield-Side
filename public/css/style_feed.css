@@ -337,6 +337,7 @@ input {
     text-align: start;
     font-family: Poppins;
     font-size: medium;
+    outline: 0;
 }
 
 select {

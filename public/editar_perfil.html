@@ -4,14 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Editar Perfil | Anfield Side</title>
-    <link rel="stylesheet" href="css/style_noticia_completa.css" />
+    <script src="js/validacoes.js"></script>
+    <link rel="stylesheet" href="css/style_editar_perfil.css" />
     <link
-    rel="shortcut icon"
-    href="assets/icons/favicon.ico"
-    type="image/x-icon"
-  />
+      rel="shortcut icon"
+      href="assets/icons/favicon.ico"
+      type="image/x-icon"
+    />
   </head>
   <body>
+    <img src="assets/imgs/bg-anfield.png" alt="" class="bg_feed_img" />
+    <div class="bg_feed_black"></div>
     <main>
       <div class="container">
         <!-- Cabeçalho -->
@@ -23,7 +26,7 @@
           <div class="group_li">
             <li><a href="feed.html">Notícias</a></li>
             <li><a href="game.html">Game</a></li>
-            <li><a style="color: #dc2626;">Pefil</a></li>
+            <li><a style="color: #dc2626">Pefil</a></li>
           </div>
           <div class="sair">
             <a href="login.html">Sair</a>
@@ -31,7 +34,124 @@
         </nav>
 
         <!-- Banner -->
-        <div class="banner"></div>
+        <div class="banner">
+          <div class="box">
+            <div class="infos">
+              <h1>Editar perfil</h1>
+              <span class="boas_vindas">
+                Bem-Vindo! 👋 É muito bom ter você aqui. Vamos atualizar seu
+                cadastro com suas novas informações
+                🔥
+              </span>
+
+              <div class="box_campos">
+                <p id="erro_nome" style="display: none; color: #dc2626">
+                  Deve conter no mínimo 2 caracteres
+                </p>
+                <div id="campo_nome" class="campos">
+                  <div class="icon">
+                    <img src="assets/icons/icon_user.png" alt="" />
+                  </div>
+                  <input
+                    id="ipt_cad_nome"
+                    oninput="mostrarErrosCadastro()"
+                    type="text"
+                    placeholder="Informe seu nome completo"
+                  />
+                </div>
+                <div id="campo_nome" class="campos">
+                  <div class="icon">
+                    <img src="assets/icons/icon_user.png" alt="" />
+                  </div>
+                  <input
+                    id="ipt_cad_bio"
+                    oninput="mostrarErrosCadastro()"
+                    type="text"
+                    placeholder="Escreva uma bio"
+                  />
+                </div>
+                <p id="erro_email" style="display: none; color: #dc2626">
+                  Deve conter pelo menos 7 dígitos, final em ".com" ou
+                  ".com.br", e "@"
+                </p>
+                <div id="campo_email" class="campos">
+                  <div class="icon">
+                    <img src="assets/icons/icon_email.png" alt="" />
+                  </div>
+                  <input
+                    id="ipt_cad_email"
+                    oninput="mostrarErrosCadastroEmail()"
+                    type="text"
+                    placeholder="Informe seu endereço de email"
+                  />
+                </div>
+                <p id="erro_senha" style="display: none; color: #dc2626">
+                  Deve conter no mínimo 8 dígitos
+                </p>
+                <div id="campo_senha" class="campos">
+                  <div class="icon">
+                    <img src="assets/icons/icon_password.png" alt="" />
+                  </div>
+                  <input
+                    id="ipt_cad_senha"
+                    oninput="mostrarErrosCadastroSenha()"
+                    type="password"
+                    placeholder="Faça a criação de uma senha"
+                  />
+                </div>
+                <p
+                  id="erro_repetir_senha"
+                  style="display: none; color: #dc2626"
+                >
+                  As senhas não coincidem
+                </p>
+                <div id="campo_repetir_senha" class="campos">
+                  <div class="icon">
+                    <img src="assets/icons/icon_password.png" alt="" />
+                  </div>
+                  <input
+                    id="ipt_cad_repetir_senha"
+                    oninput="mostrarErrosConfirmarSenha()"
+                    type="password"
+                    placeholder="Repita sua nova senha"
+                  />
+                </div>
+                <p
+                  id="erro_selecionar_jogador"
+                  style="display: none; color: #dc2626"
+                >
+                  Selecione um jogador favorito
+                </p>
+                <div id="campo_select" class="campos">
+                  <div class="icon">
+                    <img src="assets/icons/icon_arrow_down.png" alt="" />
+                  </div>
+                  <select id="slc_jogador">
+                    <option value="" disabled selected>
+                      Selecione seu jogador favorito
+                    </option>
+                    <option value="alisson">Alisson Becker</option>
+                    <option value="virgil">Virgil Van Dijk</option>
+                    <option value="konate">Ibrahima Konaté</option>
+                    <option value="robertson">Andrew Robertson</option>
+                    <option value="trent">Trent Alexander-Arnold</option>
+                    <option value="graven">Ryan-Jiro Gravenberch</option>
+                    <option value="macca">Alexis Mac Allister</option>
+                    <option value="szobo">Dominik Szoboszlai</option>
+                    <option value="diaz">Luis Diaz</option>
+                    <option value="salah">Mohamed Salah</option>
+                    <option value="darwin">Darwin Nunez</option>
+                    <option value="gakpo">Cody Gakpo</option>
+                  </select>
+                </div>
+
+                <div class="campos">
+                  <button onclick="validarCadastro()">Atualizar 🥳</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   </body>
