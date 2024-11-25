@@ -61,6 +61,7 @@ h1 {
   font-weight: 400;
   height: 100%;
   align-items: center;
+  text-align: justify;
 }
 
 .group_li {
@@ -126,7 +127,7 @@ li {
     width: 100%;
     flex-direction: column;
     /* border: solid red; */
-    height: 80vh;
+    height: fit-content;
 }
 
 .noticia {
@@ -145,10 +146,17 @@ li {
   font-size: 22px;
 }
 
+.banner span {
+  text-align: justify;
+  font-size: x-large;
+}
+
 .banner h1 {
   height: 100px;
+  font-size: 42px;
   width: 100%;
   font-weight: 600;
+  margin: 2rem 0;
 }
 
 .noticia h2 {
@@ -160,7 +168,7 @@ li {
 
 .ilustracao {
   height: 50vh;
-  width: 40%;
+  width: 100%;
   border-radius: 12px;
   /* background-image: url(../assets/ilustracoes_noticias/wirtz.png); */
   background-size: cover;

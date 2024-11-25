@@ -1004,6 +1004,7 @@ function escolher(opcao) {
     pontuacao.innerHTML = `<h1>Sua pontuação atual: ${pontos}</h2>`;
     renderizarPergunta();
   } else {
+    contador++
     console.log("Finalizou");
     var jogo = document.getElementById("box_jogo");
     var resultado = document.getElementById("div_resultado");
