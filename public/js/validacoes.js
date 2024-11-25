@@ -258,10 +258,9 @@ function validarLogin() {
           resposta.json().then(json => {
               console.log(json);
               console.log(JSON.stringify(json));
+              sessionStorage.ID_USUARIO = json.idUsuario;
               sessionStorage.EMAIL_USUARIO = json.email;
-              sessionStorage.NOME_USUARIO = json.nome;
-              sessionStorage.ID_USUARIO = json.id;
-              sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
+              sessionStorage.NOME_USUARIO = json.nomeCompleto;
 
               setTimeout(function () {
                   window.location = "./feed.html";

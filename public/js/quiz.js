@@ -998,6 +998,8 @@ function escolher(opcao) {
       <br><br>
       <button onclick="reiniciarQuiz()">Reiniciar quiz</button>
       `
+
+    inserir(max_pontos);
     }
 
     contador++;
@@ -1020,9 +1022,39 @@ function escolher(opcao) {
     <br><br>
     <button onclick="reiniciarQuiz()">Reiniciar quiz</button>
     `
+
+    inserir(max_pontos);
   }
+
+
 }
 
 function reiniciarQuiz() {
   window.location.reload();
+}
+
+function inserir(a) {
+  // console.log('entrou no inserir')
+  var maior = a;
+  var idVar = sessionStorage.ID_USUARIO;
+
+  fetch("/game/cadastrarPontuacao", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      // crie um atributo que recebe o valor recuperado aqui
+      // Agora vá para o arquivo routes/usuario.js
+      idServer: idVar,
+      pontuacaoServer: maior,
+    }),
+  })
+    .then(function (resposta) {
+      console.log("resposta: ", resposta);
+    })
+    .catch(function (resposta) {
+      console.log(`#ERRO: ${resposta}`);
+      finalizarAguardar();
+    });
 }
