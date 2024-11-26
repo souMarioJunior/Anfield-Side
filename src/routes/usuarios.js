@@ -12,4 +12,6 @@ router.post("/autenticar", function (req, res) {
     usuarioController.autenticar(req, res);
 });
 
+router.get('/jogador/:idUser', usuarioController.jogadorFavorito);
+
 module.exports = router;

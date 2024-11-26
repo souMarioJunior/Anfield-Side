@@ -15,7 +15,6 @@ function autenticar(email, senha) {
 // senha varchar(28),
 // jogadorFavorito varchar(30),
 
-// Coloque os mesmos parâmetros aqui. Vá para a var instrucaoSql
 function cadastrar(nome, email, senha, jogadorFavorito) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nome, email, senha, jogadorFavorito);
     
@@ -28,7 +27,17 @@ function cadastrar(nome, email, senha, jogadorFavorito) {
     return database.executar(instrucaoSql);
 }
 
+async function getFavoritePlayerById(idUser){
+    console.log('cheguei na model');
+
+    const jogador = await database.executar(`SELECT jogadorFavorito FROM usuario WHERE idUsuario = ${idUser}`);
+
+    return jogador
+}
+
 module.exports = {
     autenticar,
-    cadastrar
+    cadastrar,
+    getFavoritePlayerById
 };
+

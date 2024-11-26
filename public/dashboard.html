@@ -35,14 +35,14 @@
         <!-- Banner -->
         <div class="banner">
           <div class="left_side">
-            <h1>Mário Junior</h1>
+            <h1 id="userNameH1"></h1>
             <span class="bio"
               >Olá! 👋 Além de torcedor do Liverpool eu também sou estudante de
               Ciências da Computação na SP Tech 🤓☝. Massa, né? 😁</span
             >
 
             <h1>Jogador favorito ⚽</h1>
-            <span class="jogador_favorito">Mohamed Salah</span>
+            <span class="jogador_favorito" id="favoritePlayer"></span>
 
             <h1>Sua interação com notícias 📰</h1>
             <div class="likes">
@@ -82,6 +82,23 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
+  document.getElementById('userNameH1').innerHTML = sessionStorage.getItem('NOME_USUARIO')
+
+ async function getJogador(idUsuario){
+    const resposta = await fetch(`/usuarios/jogador/${idUsuario}`);
+
+    if(!resposta.ok){
+      console.log('erro na resposta');
+    }else{
+      console.log('resposta ok');
+      const resultado = await resposta.json()
+      document.getElementById('favoritePlayer').innerHTML = resultado[0].jogadorFavorito
+    }
+
+ };
+ 
+ getJogador(sessionStorage.getItem('ID_USUARIO'))
+
   const ctx = document.getElementById('myChart');
 
   new Chart(ctx, {

@@ -17,7 +17,7 @@ function autenticar(req, res) {
                     console.log(`Resultados: ${JSON.stringify(resultadoAutenticar)}`); // transforma JSON em String
 
                     if (resultadoAutenticar.length == 1) {
-                        console.log(resultadoAutenticar);
+                        console.log(resultadoAutenticar); 
                         res.json({
                             idUsuario: resultadoAutenticar[0].idUsuario,
                             nomeCompleto: resultadoAutenticar[0].nomeCompleto,
@@ -87,7 +87,16 @@ function cadastrar(req, res) {
     }
 }
 
+const jogadorFavorito = async (req, res) => {
+    const { idUser } = req.params;
+    
+    const jogador = await usuarioModel.getFavoritePlayerById(idUser);
+        
+    res.json(jogador)
+
+}
 module.exports = {
     autenticar,
-    cadastrar
+    cadastrar,
+    jogadorFavorito
 }
