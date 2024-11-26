@@ -1,22 +1,15 @@
 var interacaoModel = require("../models/interacaoModel");
 
-function cadastrar(requisicao, resposta) {
-  var fkUsuario = requisicao.body.fkUsuario;
-  var fkManchete = requisicao.body.fkManchete;
-  var tipo = requisicao.body.tipo;
+function trocarLike(req, res) {
+  var idUsuario = req.body.idUsuario;
+  var idManchete = req.body.idManchete;
+  var tipo = req.body.tipo;
 
-  if (fkUsuario == undefined || fkManchete == undefined || tipo == undefined) {
-    resposta.status(400).send("Parâmetros undefined")
-  } else {
-    interacaoModel.cadastrar(fkUsuario, fkManchete, tipo)
-  }
-}
+  interacaoModel.atualizarLike(idUsuario, idManchete, tipo);
 
-function olaMundo(requisicao, resposta) {
-  resposta.status(200).send("Olá mundo!");
+  res.json();
 }
 
 module.exports = {
-  cadastrar,
-  // olaMundo
+  trocarLike
 };
