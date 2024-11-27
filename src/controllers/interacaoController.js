@@ -148,6 +148,19 @@ function trazerRecorde(req, res) {
   )
 }
 
+function ranking(req, res) {
+  interacaoModel.ranking()
+  .then(
+    function(resultadoAutenticar) {
+      res.status(200).json(resultadoAutenticar)
+    }
+  ) .catch(
+    function(erro) {
+      res.status(500).json(erro.sqlMessage)
+    }
+  )
+}
+
 module.exports = {
   trocarLike,
   trazerLike,
@@ -159,5 +172,6 @@ module.exports = {
   preencherLike,
   trazerLikesDashboard,
   trazerDeslikesDashboard,
-  trazerRecorde
+  trazerRecorde,
+  ranking
 };

@@ -29,6 +29,11 @@ var interacaoController = require("../controllers/interacaoController");
         // console.log("passei na rota de trazer like :)")
     })
 
+    router.get("/ranking", function(req, res) {
+        interacaoController.ranking(req, res);
+        // console.log("passei na rota de trazer like :)")
+    })
+
     router.get("/trazerDeslike", function(req, res) {
         interacaoController.trazerDeslike(req, res);
         console.log("passei na rota de trazer deslike :)")

@@ -66,11 +66,11 @@
 
             <h1>Rank Game Quiz</h1>
             <div class="ranking">
-              <h2>🥇 Mário Junior - 1º</h2>
-              <h2>🥈 Aaron Cutipa - 2º</h2>
-              <h2>🥉 Guilherme BIOS - 3º</h2>
-              <h2>Henrique Andrade - 4º</h2>
-              <h2>Laysa Bispo - 5º</h2>
+              <h2 id="id_rank_1">🥇 Aguardando campeão... - 1º</h2>
+              <h2 id="id_rank_2">🥈 Aguardando campeão... - 2º</h2>
+              <h2 id="id_rank_3">🥉 Aguardando campeão... - 3º</h2>
+              <h2 id="id_rank_4">Aguardando campeão... - 4º</h2>
+              <h2 id="id_rank_5">Aguardando campeão... - 5º</h2>
             </div>
           </div>
         </div>
@@ -141,6 +141,25 @@
           trazerRecorde = 0
         }
         id_recorde.innerHTML = `<b>${trazerRecorde} pontos</b>`;
+      });
+
+      fetch(`http://localhost:3333/interacao/ranking`,{
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        var trazerRecorde = res[0].pontuacao;
+        console.log(res)
+
+        id_rank_1.innerHTML = `🥇 ${res[0].nomeCompleto} - 1º`;
+        id_rank_2.innerHTML = `🥈 ${res[1].nomeCompleto} - 2º`;
+        id_rank_3.innerHTML = `🥉 ${res[2].nomeCompleto} - 3º`;
+        id_rank_4.innerHTML = `${res[3].nomeCompleto} - 4º`;
+        id_rank_5.innerHTML = `${res[4].nomeCompleto} - 5º`;
       });
  };
 

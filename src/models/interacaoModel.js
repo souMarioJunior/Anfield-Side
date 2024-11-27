@@ -76,6 +76,11 @@ function trazerRecorde(idUsuario) {
     return database.executar(instrucaoSql);
 }
 
+function ranking(idUsuario) {
+    var instrucaoSql = `select u.nomeCompleto, pontuacao from quiz join usuario as u  on fkUsuario = idUsuario order by pontuacao desc limit 5;`
+    return database.executar(instrucaoSql);
+}
+
 module.exports = {
     trocarLike,
     trazerLike,
@@ -87,5 +92,6 @@ module.exports = {
     preencherLike,
     trazerLikesDashboard,
     trazerDeslikesDashboard,
-    trazerRecorde
+    trazerRecorde,
+    ranking
 };
