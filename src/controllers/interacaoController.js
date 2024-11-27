@@ -78,6 +78,34 @@ function inserirLikeNoBanco(req, res) {
     }
   )
 }
+function inserirDeslikeNoBanco(req, res) {
+  var manchete = req.params.manchete;
+  var idUsuario = req.params.idUsuario;
+  interacaoModel.inserirDeslikeNoBanco(manchete, idUsuario)
+  .then(
+    function(resultadoAutenticar) {
+      res.status(200).json(resultadoAutenticar)
+    }
+  ) .catch(
+    function(erro) {
+      res.status(500).json(erro.sqlMessage)
+    }
+  )
+}
+
+function preencherLike(req, res) {
+  var idUsuario = req.params.idUsuario;
+  interacaoModel.preencherLike(idUsuario)
+  .then(
+    function(resultadoAutenticar) {
+      res.status(200).json(resultadoAutenticar)
+    }
+  ) .catch(
+    function(erro) {
+      res.status(500).json(erro.sqlMessage)
+    }
+  )
+}
 
 module.exports = {
   trocarLike,
@@ -85,5 +113,7 @@ module.exports = {
   trazerDeslike,
   darLike,
   darDeslike,
-  inserirLikeNoBanco
+  inserirLikeNoBanco,
+  inserirDeslikeNoBanco,
+  preencherLike
 };

@@ -727,21 +727,151 @@
   var descurtida_14 = 0;
   var descurtida_15 = 0;
 
-  // function renderizarManchete() {
-  //   console.log(sessionStorage.ID_USUARIO);
-  //   fetch("/manchete/list", {
-  //     method: "post",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify({
-  //       idUsuario: sessionStorage.ID_USUARIO,
-  //     }),
-  //   }).then(function (res) {
-  //     res.json().then(function (resposta) {
-  //     });
-  //   });
-  // }
+  fetch(
+      `http://localhost:3333/interacao/preencherLike/${sessionStorage.ID_USUARIO}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res)
+        for (var i = 0; i < res.length; i++){
+          var post_atual = res[i].post;
+          var interacao_atual = res[i].tipo;
+          if (interacao_atual == '1'){
+            if (post_atual == 1){
+              img_1.src = "assets/ilustracoes_noticias/like_preenchido.png"
+              img_1.onclick = "";
+              img_deslike_1.onclick = "";
+
+            } else if (post_atual == 2){
+              img_2.src = "assets/ilustracoes_noticias/like_preenchido.png"
+              img_2.onclick = "";
+              img_deslike_2.onclick = "";
+            } else if (post_atual == 3){
+              img_3.src = "assets/ilustracoes_noticias/like_preenchido.png"
+              img_3.onclick = "";
+              img_deslike_3.onclick = "";
+            } else if (post_atual == 4){
+              img_4.src = "assets/ilustracoes_noticias/like_preenchido.png"
+              img_4.onclick = "";
+              img_deslike_4.onclick = "";
+            } else if (post_atual == 5){
+              img_5.src = "assets/ilustracoes_noticias/like_preenchido.png"
+              img_5.onclick = "";
+              img_deslike_5.onclick = "";
+            } else if (post_atual == 6){
+              img_6.src = "assets/ilustracoes_noticias/like_preenchido.png"
+              img_6.onclick = "";
+              img_deslike_6.onclick = "";
+            } else if (post_atual == 7){
+              img_7.src = "assets/ilustracoes_noticias/like_preenchido.png"
+              img_7.onclick = "";
+              img_deslike_7.onclick = "";
+            } else if (post_atual == 8){
+              img_8.src = "assets/ilustracoes_noticias/like_preenchido.png"
+              img_8.onclick = "";
+              img_deslike_8.onclick = "";
+            } else if (post_atual == 9){
+              img_9.src = "assets/ilustracoes_noticias/like_preenchido.png"
+              img_9.onclick = "";
+              img_deslike_9.onclick = "";
+            } else if (post_atual == 10){
+              img_10.src = "assets/ilustracoes_noticias/like_preenchido.png"
+              img_10.onclick = "";
+              img_deslike_10.onclick = "";
+            } else if (post_atual == 11){
+              img_11.src = "assets/ilustracoes_noticias/like_preenchido.png"
+              img_11.onclick = "";
+              img_deslike_11.onclick = "";
+            } else if (post_atual == 12){
+              img_12.src = "assets/ilustracoes_noticias/like_preenchido.png"
+              img_12.onclick = "";
+              img_deslike_12.onclick = "";
+            } else if (post_atual == 13){
+              img_13.src = "assets/ilustracoes_noticias/like_preenchido.png"
+              img_13.onclick = "";
+              img_deslike_13.onclick = "";
+            } else if (post_atual == 14){
+              img_14.src = "assets/ilustracoes_noticias/like_preenchido.png"
+              img_14.onclick = "";
+              img_deslike_14.onclick = "";
+            } else if (post_atual == 15){
+              img_15.src = "assets/ilustracoes_noticias/like_preenchido.png"
+              img_15.onclick = "";
+              img_deslike_15.onclick = "";
+            }
+          } else if (interacao_atual == "0"){
+            if (post_atual == 1){
+              img_deslike_1.src = "assets/ilustracoes_noticias/deslike_preenchido.png"
+              img_deslike_1.onclick = "";
+              img_1.onclick = "";
+            } else if (post_atual == 2){
+              img_deslike_2.src = "assets/ilustracoes_noticias/deslike_preenchido.png"
+              img_deslike_2.onclick = "";
+              img_2.onclick = "";
+            } else if (post_atual == 3){
+              img_deslike_3.src = "assets/ilustracoes_noticias/deslike_preenchido.png"
+              img_deslike_3.onclick = "";
+              img_3.onclick = "";
+            } else if (post_atual == 4){
+              img_deslike_4.src = "assets/ilustracoes_noticias/deslike_preenchido.png"
+              img_deslike_4.onclick = "";
+              img_4.onclick = "";
+            } else if (post_atual == 5){
+              img_deslike_5.src = "assets/ilustracoes_noticias/deslike_preenchido.png"
+              img_deslike_5.onclick = "";
+              img_5.onclick = "";
+            } else if (post_atual == 6){
+              img_deslike_6.src = "assets/ilustracoes_noticias/deslike_preenchido.png"
+              img_deslike_6.onclick = "";
+              img_6.onclick = "";
+            } else if (post_atual == 7){
+              img_deslike_7.src = "assets/ilustracoes_noticias/deslike_preenchido.png"
+              img_deslike_7.onclick = "";
+              img_7.onclick = "";
+            } else if (post_atual == 8){
+              img_deslike_8.src = "assets/ilustracoes_noticias/deslike_preenchido.png"
+              img_deslike_8.onclick = "";
+              img_8.onclick = "";
+            } else if (post_atual == 9){
+              img_deslike_9.src = "assets/ilustracoes_noticias/deslike_preenchido.png"
+              img_deslike_9.onclick = "";
+              img_9.onclick = "";
+            } else if (post_atual == 10){
+              img_deslike_10.src = "assets/ilustracoes_noticias/deslike_preenchido.png"
+              img_deslike_10.onclick = "";
+              img_10.onclick = "";
+            } else if (post_atual == 11){
+              img_deslike_11.src = "assets/ilustracoes_noticias/deslike_preenchido.png"
+              img_deslike_11.onclick = "";
+              img_11.onclick = "";
+            } else if (post_atual == 12){
+              img_deslike_12.src = "assets/ilustracoes_noticias/deslike_preenchido.png"
+              img_deslike_12.onclick = "";
+              img_12.onclick = "";
+            } else if (post_atual == 13){
+              img_deslike_13.src = "assets/ilustracoes_noticias/deslike_preenchido.png"
+              img_deslike_13.onclick = "";
+              img_13.onclick = "";
+            } else if (post_atual == 14){
+              img_deslike_14.src = "assets/ilustracoes_noticias/deslike_preenchido.png"
+              img_deslike_14.onclick = "";
+              img_14.onclick = "";
+            } else if (post_atual == 15){
+              img_deslike_15.src = "assets/ilustracoes_noticias/deslike_preenchido.png"
+              img_deslike_15.onclick = "";
+              img_15.onclick = "";
+            }
+          }
+        }
+      });
+
+  
 
   fetch(`http://localhost:3333/interacao/trazerLike`, {
     method: "GET",
@@ -873,9 +1003,6 @@
       // console.log('deu errado no trazer mermao')
     });
 
-  // function curtir(){
-  //   document.getElementByid("like_" + contador_noticia).src = "assets/ilustracoes_noticias/like_preenchido.png"
-  // }
 
   var manchete = 0;
 
@@ -1345,6 +1472,19 @@
       .then((res) => {
         // console.log(res)
       });
+
+      // inserir na tabela interacao 
+      fetch(`http://localhost:3333/interacao/inserirDeslikeNoBanco/${manchete}/${sessionStorage.ID_USUARIO}`,{
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        // console.log(res)
+      });
   }
 
   function darDeslike_2() {
@@ -1357,6 +1497,20 @@
         "Content-Type": "application/json",
       },
     })
+      .then((res) => res.json())
+      .then((res) => {
+        // console.log(res)
+      });
+
+            fetch(
+      `http://localhost:3333/interacao/inserirDeslikeNoBanco/${manchete}/${sessionStorage.ID_USUARIO}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
       .then((res) => res.json())
       .then((res) => {
         // console.log(res)
@@ -1377,6 +1531,20 @@
       .then((res) => {
         // console.log(res)
       });
+
+            fetch(
+      `http://localhost:3333/interacao/inserirDeslikeNoBanco/${manchete}/${sessionStorage.ID_USUARIO}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        // console.log(res)
+      });
   }
 
   function darDeslike_4() {
@@ -1389,6 +1557,20 @@
         "Content-Type": "application/json",
       },
     })
+      .then((res) => res.json())
+      .then((res) => {
+        // console.log(res)
+      });
+
+            fetch(
+      `http://localhost:3333/interacao/inserirDeslikeNoBanco/${manchete}/${sessionStorage.ID_USUARIO}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
       .then((res) => res.json())
       .then((res) => {
         // console.log(res)
@@ -1409,6 +1591,20 @@
       .then((res) => {
         // console.log(res)
       });
+
+            fetch(
+      `http://localhost:3333/interacao/inserirDeslikeNoBanco/${manchete}/${sessionStorage.ID_USUARIO}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        // console.log(res)
+      });
   }
 
   function darDeslike_6() {
@@ -1421,6 +1617,20 @@
         "Content-Type": "application/json",
       },
     })
+      .then((res) => res.json())
+      .then((res) => {
+        // console.log(res)
+      });
+
+            fetch(
+      `http://localhost:3333/interacao/inserirDeslikeNoBanco/${manchete}/${sessionStorage.ID_USUARIO}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
       .then((res) => res.json())
       .then((res) => {
         // console.log(res)
@@ -1441,6 +1651,20 @@
       .then((res) => {
         // console.log(res)
       });
+
+            fetch(
+      `http://localhost:3333/interacao/inserirDeslikeNoBanco/${manchete}/${sessionStorage.ID_USUARIO}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        // console.log(res)
+      });
   }
 
   function darDeslike_8() {
@@ -1453,6 +1677,20 @@
         "Content-Type": "application/json",
       },
     })
+      .then((res) => res.json())
+      .then((res) => {
+        // console.log(res)
+      });
+
+            fetch(
+      `http://localhost:3333/interacao/inserirDeslikeNoBanco/${manchete}/${sessionStorage.ID_USUARIO}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
       .then((res) => res.json())
       .then((res) => {
         // console.log(res)
@@ -1473,6 +1711,20 @@
       .then((res) => {
         // console.log(res)
       });
+
+            fetch(
+      `http://localhost:3333/interacao/inserirDeslikeNoBanco/${manchete}/${sessionStorage.ID_USUARIO}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        // console.log(res)
+      });
   }
 
   function darDeslike_10() {
@@ -1485,6 +1737,20 @@
         "Content-Type": "application/json",
       },
     })
+      .then((res) => res.json())
+      .then((res) => {
+        // console.log(res)
+      });
+
+            fetch(
+      `http://localhost:3333/interacao/inserirDeslikeNoBanco/${manchete}/${sessionStorage.ID_USUARIO}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
       .then((res) => res.json())
       .then((res) => {
         // console.log(res)
@@ -1505,6 +1771,20 @@
       .then((res) => {
         // console.log(res)
       });
+
+            fetch(
+      `http://localhost:3333/interacao/inserirDeslikeNoBanco/${manchete}/${sessionStorage.ID_USUARIO}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        // console.log(res)
+      });
   }
 
   function darDeslike_12() {
@@ -1517,6 +1797,20 @@
         "Content-Type": "application/json",
       },
     })
+      .then((res) => res.json())
+      .then((res) => {
+        // console.log(res)
+      });
+
+            fetch(
+      `http://localhost:3333/interacao/inserirDeslikeNoBanco/${manchete}/${sessionStorage.ID_USUARIO}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
       .then((res) => res.json())
       .then((res) => {
         // console.log(res)
@@ -1537,6 +1831,20 @@
       .then((res) => {
         // console.log(res)
       });
+
+            fetch(
+      `http://localhost:3333/interacao/inserirDeslikeNoBanco/${manchete}/${sessionStorage.ID_USUARIO}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        // console.log(res)
+      });
   }
 
   function darDeslike_14() {
@@ -1553,6 +1861,20 @@
       .then((res) => {
         // console.log(res)
       });
+
+            fetch(
+      `http://localhost:3333/interacao/inserirDeslikeNoBanco/${manchete}/${sessionStorage.ID_USUARIO}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        // console.log(res)
+      });
   }
 
   function darDeslike_15() {
@@ -1565,6 +1887,20 @@
         "Content-Type": "application/json",
       },
     })
+      .then((res) => res.json())
+      .then((res) => {
+        // console.log(res)
+      });
+
+            fetch(
+      `http://localhost:3333/interacao/inserirDeslikeNoBanco/${manchete}/${sessionStorage.ID_USUARIO}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
       .then((res) => res.json())
       .then((res) => {
         // console.log(res)

@@ -5,7 +5,7 @@ var interacaoController = require("../controllers/interacaoController");
 
     router.post("/trocarLike/:idUsuario", function(req, res) {
         interacaoController.trocarLike(req, res);
-        console.log("passei na rota")
+        // console.log("passei na rota")
         console.log(req.params.idUsuario)
     })
 
@@ -34,4 +34,13 @@ var interacaoController = require("../controllers/interacaoController");
         console.log(req.params.manchete, ' idManchete')
     })
 
+    router.get("/preencherLike/:idUsuario", function(req, res) {
+        interacaoController.preencherLike(req, res);
+        console.log(req.params.idUsuario, ' ID_USUARIO NA ROTA DO PREENCHER LIKE')
+    })
+    router.post("/inserirDeslikeNoBanco/:manchete/:idUsuario", function(req, res) {
+        interacaoController.inserirDeslikeNoBanco(req, res);
+        console.log(req.params.idUsuario, ' ID_USUARIO NA ROTA DO PREENCHER deslike')
+    })
+    
 module.exports = router;
