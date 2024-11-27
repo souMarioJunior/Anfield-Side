@@ -41,8 +41,40 @@ function trazerDeslike() {
     return database.executar(instrucaoSql); 
 }
 
+function darLike(manchete) {
+    console.log('To dentro da Model com dar likes >:)')
+    var instrucaoSql = `
+    update manchete
+    set noticiaLikes = noticiaLikes + 1
+    where idManchete = ${manchete}
+    `
+    return database.executar(instrucaoSql); 
+}
+
+function darDeslike(manchete) {
+    console.log('To dentro da Model com dar deslikes >:)')
+    var instrucaoSql = `
+    update manchete
+    set noticiaDeslikes = noticiaDeslikes + 1
+    where idManchete = ${manchete}
+    `
+    return database.executar(instrucaoSql); 
+}
+
+function inserirLikeNoBanco(manchete, idUsuario) {
+    console.log('To dentro da Model com dar deslikes >:)')
+    var instrucaoSql = `
+    insert into interacao values
+    (${idUsuario}, ${manchete}, '1')
+    `
+    return database.executar(instrucaoSql); 
+}
+
 module.exports = {
     trocarLike,
     trazerLike,
-    trazerDeslike
+    trazerDeslike,
+    darLike,
+    darDeslike,
+    inserirLikeNoBanco
 };

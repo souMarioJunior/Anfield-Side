@@ -36,8 +36,54 @@ function trazerDeslike(req, res) {
   )
 }
 
+function darLike(req, res) {
+  var manchete = req.params.manchete;
+  interacaoModel.darLike(manchete)
+  .then(
+    function(resultadoAutenticar) {
+      res.status(200).json(resultadoAutenticar)
+    }
+  ) .catch(
+    function(erro) {
+      res.status(500).json(erro.sqlMessage)
+    }
+  )
+}
+
+function darDeslike(req, res) {
+  var manchete = req.params.manchete;
+  interacaoModel.darDeslike(manchete)
+  .then(
+    function(resultadoAutenticar) {
+      res.status(200).json(resultadoAutenticar)
+    }
+  ) .catch(
+    function(erro) {
+      res.status(500).json(erro.sqlMessage)
+    }
+  )
+}
+
+function inserirLikeNoBanco(req, res) {
+  var manchete = req.params.manchete;
+  var idUsuario = req.params.idUsuario;
+  interacaoModel.inserirLikeNoBanco(manchete, idUsuario)
+  .then(
+    function(resultadoAutenticar) {
+      res.status(200).json(resultadoAutenticar)
+    }
+  ) .catch(
+    function(erro) {
+      res.status(500).json(erro.sqlMessage)
+    }
+  )
+}
+
 module.exports = {
   trocarLike,
   trazerLike,
-  trazerDeslike
+  trazerDeslike,
+  darLike,
+  darDeslike,
+  inserirLikeNoBanco
 };

@@ -19,4 +19,19 @@ var interacaoController = require("../controllers/interacaoController");
         console.log("passei na rota de trazer deslike :)")
     })
 
+    router.put("/darLike/:manchete", function(req, res) {
+        interacaoController.darLike(req, res);
+        console.log(req.params.manchete, ' idManchete')
+    })
+
+    router.put("/darDeslike/:manchete", function(req, res) {
+        interacaoController.darDeslike(req, res);
+        console.log(req.params.manchete, ' idManchete')
+    })
+
+    router.post("/inserirLikeNoBanco/:manchete/:idUsuario", function(req, res) {
+        interacaoController.inserirLikeNoBanco(req, res);
+        console.log(req.params.manchete, ' idManchete')
+    })
+
 module.exports = router;
