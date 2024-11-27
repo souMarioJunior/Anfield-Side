@@ -134,6 +134,20 @@ function trazerDeslikesDashboard(req, res) {
   )
 }
 
+function trazerRecorde(req, res) {
+  var idUsuario = req.params.idUsuario
+  interacaoModel.trazerRecorde(idUsuario)
+  .then(
+    function(resultadoAutenticar) {
+      res.status(200).json(resultadoAutenticar)
+    }
+  ) .catch(
+    function(erro) {
+      res.status(500).json(erro.sqlMessage)
+    }
+  )
+}
+
 module.exports = {
   trocarLike,
   trazerLike,
@@ -144,5 +158,6 @@ module.exports = {
   inserirDeslikeNoBanco,
   preencherLike,
   trazerLikesDashboard,
-  trazerDeslikesDashboard
+  trazerDeslikesDashboard,
+  trazerRecorde
 };

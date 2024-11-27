@@ -24,6 +24,11 @@ var interacaoController = require("../controllers/interacaoController");
         // console.log("passei na rota de trazer like :)")
     })
 
+    router.get("/trazerRecorde/:idUsuario", function(req, res) {
+        interacaoController.trazerRecorde(req, res);
+        // console.log("passei na rota de trazer like :)")
+    })
+
     router.get("/trazerDeslike", function(req, res) {
         interacaoController.trazerDeslike(req, res);
         console.log("passei na rota de trazer deslike :)")
@@ -52,5 +57,5 @@ var interacaoController = require("../controllers/interacaoController");
         interacaoController.inserirDeslikeNoBanco(req, res);
         console.log(req.params.idUsuario, ' ID_USUARIO NA ROTA DO PREENCHER deslike')
     })
-    
+
 module.exports = router;

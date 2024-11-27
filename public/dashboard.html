@@ -53,7 +53,7 @@
             </div>
 
             <h1 class="recorde">Recorde no Game Quiz 🤩</h1>
-            <span>Tantos acertos</span>
+            <span id="id_recorde" style="margin: 0; padding: 0; font-size: 32px;">Tantos acertos</span>
             <br><br><br>
             <a class="btn" href="editar_perfil.html">Editar informações 📝</a>
           </div>
@@ -124,6 +124,23 @@
           DeslikesDoUsuario = 0
         }
         id_deslikes_usuario.innerHTML = DeslikesDoUsuario;
+      });
+
+      fetch(`http://localhost:3333/interacao/trazerRecorde/${sessionStorage.ID_USUARIO}`,{
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        var trazerRecorde = res[0].pontuacao;
+        console.log(res[0].pontuacao)
+        if(trazerRecorde == undefined) {
+          trazerRecorde = 0
+        }
+        id_recorde.innerHTML = `<b>${trazerRecorde} pontos</b>`;
       });
  };
 

@@ -71,6 +71,11 @@ function trazerDeslikesDashboard(idUsuario) {
     return database.executar(instrucaoSql);
 }
 
+function trazerRecorde(idUsuario) {
+    var instrucaoSql = `select pontuacao from quiz where fkUsuario = ${idUsuario} order by pontuacao desc limit 1;`
+    return database.executar(instrucaoSql);
+}
+
 module.exports = {
     trocarLike,
     trazerLike,
@@ -81,5 +86,6 @@ module.exports = {
     inserirDeslikeNoBanco,
     preencherLike,
     trazerLikesDashboard,
-    trazerDeslikesDashboard
+    trazerDeslikesDashboard,
+    trazerRecorde
 };
