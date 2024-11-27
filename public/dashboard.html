@@ -47,9 +47,9 @@
             <h1>Sua interação com notícias 📰</h1>
             <div class="likes">
               <img src="assets/ilustracoes_noticias/like.png" alt="">
-              <span>999</span>
+              <span id="id_likes_usuario">999</span>
               <img src="assets/ilustracoes_noticias/deslike.png" alt="">
-              <span>12</span>
+              <span id="id_deslikes_usuario">12</span>
             </div>
 
             <h1 class="recorde">Recorde no Game Quiz 🤩</h1>
@@ -95,8 +95,40 @@
       document.getElementById('favoritePlayer').innerHTML = resultado[0].jogadorFavorito
     }
 
+    fetch(`http://localhost:3333/interacao/trazerLikesDashboard/${sessionStorage.ID_USUARIO}`,{
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        var LikesDoUsuario = res[0].Likes;
+        // console.log(res[0].Likes)
+        id_likes_usuario.innerHTML = LikesDoUsuario;
+      });
+
+      fetch(`http://localhost:3333/interacao/trazerDeslikesDashboard/${sessionStorage.ID_USUARIO}`,{
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        var DeslikesDoUsuario = res[0].Deslikes;
+        // console.log(res[0].Likes)
+        if(DeslikesDoUsuario == undefined) {
+          DeslikesDoUsuario = 0
+        }
+        id_deslikes_usuario.innerHTML = DeslikesDoUsuario;
+      });
  };
+
  
+
  getJogador(sessionStorage.getItem('ID_USUARIO'))
 
   const ctx = document.getElementById('myChart');

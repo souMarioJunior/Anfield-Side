@@ -61,6 +61,16 @@ function preencherLike(idUsuario) {
     return database.executar(instrucaoSql); 
 }
 
+function trazerLikesDashboard(idUsuario) {
+    var instrucaoSql = `select count(fkManchete) as Likes from interacao where fkUsuario = ${idUsuario} and tipo = '1';`
+    return database.executar(instrucaoSql);
+}
+
+function trazerDeslikesDashboard(idUsuario) {
+    var instrucaoSql = `select count(fkManchete) as Deslikes from interacao where fkUsuario = ${idUsuario} and tipo = '0';`
+    return database.executar(instrucaoSql);
+}
+
 module.exports = {
     trocarLike,
     trazerLike,
@@ -69,5 +79,7 @@ module.exports = {
     darDeslike,
     inserirLikeNoBanco,
     inserirDeslikeNoBanco,
-    preencherLike
+    preencherLike,
+    trazerLikesDashboard,
+    trazerDeslikesDashboard
 };

@@ -14,6 +14,16 @@ var interacaoController = require("../controllers/interacaoController");
         console.log("passei na rota de trazer like :)")
     })
 
+    router.get("/trazerLikesDashboard/:idUsuario", function(req, res) {
+        interacaoController.trazerLikesDashboard(req, res);
+        // console.log("passei na rota de trazer like :)")
+    })
+
+    router.get("/trazerDeslikesDashboard/:idUsuario", function(req, res) {
+        interacaoController.trazerDeslikesDashboard(req, res);
+        // console.log("passei na rota de trazer like :)")
+    })
+
     router.get("/trazerDeslike", function(req, res) {
         interacaoController.trazerDeslike(req, res);
         console.log("passei na rota de trazer deslike :)")

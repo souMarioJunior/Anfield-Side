@@ -1,5 +1,4 @@
 var interacaoModel = require("../models/interacaoModel");
-console.log("CONTROLER CARALHO");
 
 function trocarLike(req, res) {
 
@@ -107,6 +106,34 @@ function preencherLike(req, res) {
   )
 }
 
+function trazerLikesDashboard(req, res) {
+  var idUsuario = req.params.idUsuario
+  interacaoModel.trazerLikesDashboard(idUsuario)
+  .then(
+    function(resultadoAutenticar) {
+      res.status(200).json(resultadoAutenticar)
+    }
+  ) .catch(
+    function(erro) {
+      res.status(500).json(erro.sqlMessage)
+    }
+  )
+}
+
+function trazerDeslikesDashboard(req, res) {
+  var idUsuario = req.params.idUsuario
+  interacaoModel.trazerDeslikesDashboard(idUsuario)
+  .then(
+    function(resultadoAutenticar) {
+      res.status(200).json(resultadoAutenticar)
+    }
+  ) .catch(
+    function(erro) {
+      res.status(500).json(erro.sqlMessage)
+    }
+  )
+}
+
 module.exports = {
   trocarLike,
   trazerLike,
@@ -115,5 +142,7 @@ module.exports = {
   darDeslike,
   inserirLikeNoBanco,
   inserirDeslikeNoBanco,
-  preencherLike
+  preencherLike,
+  trazerLikesDashboard,
+  trazerDeslikesDashboard
 };
