@@ -377,23 +377,12 @@ button {
   align-items: center;
 }
 
-.box_likes_1 img,
-.box_likes_2 img,
-.box_likes_3 img,
-.box_likes_4 img,
-.box_likes_5 img,
-.box_likes_6 img,
-.box_likes_7 img,
-.box_likes_8 img,
-.box_likes_9 img,
-.box_likes_10 img,
-.box_likes_11 img,
-.box_likes_12 img,
-.box_likes_13 img,
-.box_likes_14 img,
-.box_likes_15 img
- {
-  cursor: pointer;
+
+.like {
+  cursor: pointer !important;
+}
+.deslike {
+  cursor: pointer !important;
 }
 
 .right_side {

@@ -1007,7 +1007,7 @@ function escolher(opcao) {
     renderizarPergunta();
   } else {
     contador++
-    console.log("Finalizou");
+    // console.log("Finalizou");
     var jogo = document.getElementById("box_jogo");
     var resultado = document.getElementById("div_resultado");
     jogo.style.display = "none";
@@ -1051,10 +1051,10 @@ function inserir(a) {
     }),
   })
     .then(function (resposta) {
-      console.log("resposta: ", resposta);
+      // console.log("resposta: ", resposta);
     })
     .catch(function (resposta) {
-      console.log(`#ERRO: ${resposta}`);
+      // console.log(`#ERRO: ${resposta}`);
       finalizarAguardar();
     });
 }
