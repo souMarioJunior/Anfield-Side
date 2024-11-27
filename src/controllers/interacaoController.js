@@ -5,7 +5,7 @@ function trocarLike(req, res) {
   var idUsuario = req.params.idUsuario;
 
   interacaoModel.trocarLke(idUsuario);
-  console.log(idUsuario)
+  // console.log(idUsuario)
   res.json();
 }
 

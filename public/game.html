@@ -40,7 +40,7 @@
           <div id="box_infos" style="display: flex" class="box_infos fade-in-top">
             <div class="saudacao">
               <h1>Saudações,</h1>
-              <span class="nome">Mário Junior 👋</span>
+              <span id="nome" class="nome">Usuário 👋</span>
             </div>
             <br />
             <span class="desc"
@@ -75,3 +75,9 @@
     </main>
   </body>
 </html>
+
+<script>
+  var nomeDoUsuario = document.getElementById("nome");
+
+  nomeDoUsuario.innerHTML = `${sessionStorage.NOME_USUARIO}`
+</script>

@@ -2,7 +2,7 @@ var mancheteModel = require("../models/mancheteModel");
 
 function listarManchetes(req, res) {
     var idUsuario = req.body.idUsuario;
-    console.log(idUsuario)
+    // console.log(idUsuario)
 
         mancheteModel.listarManchetes(idUsuario)
             .then(

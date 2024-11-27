@@ -37,8 +37,9 @@
           <div class="left_side">
             <h1 id="userNameH1"></h1>
             <span class="bio"
-              >Olá! 👋 Além de torcedor do Liverpool eu também sou estudante de
-              Ciências da Computação na SP Tech 🤓☝. Massa, né? 😁</span
+              >Olá! 👋 Por aqui você pode acompanhar suas estatísticas de
+              reações e suas estatísticas do Game Quiz. Espero ver você no
+              ranking, hein 👀</span
             >
 
             <h1>Jogador favorito ⚽</h1>
@@ -46,16 +47,18 @@
 
             <h1>Sua interação com notícias 📰</h1>
             <div class="likes">
-              <img src="assets/ilustracoes_noticias/like.png" alt="">
+              <img src="assets/ilustracoes_noticias/like.png" alt="" />
               <span id="id_likes_usuario">999</span>
-              <img src="assets/ilustracoes_noticias/deslike.png" alt="">
+              <img src="assets/ilustracoes_noticias/deslike.png" alt="" />
               <span id="id_deslikes_usuario">12</span>
             </div>
 
             <h1 class="recorde">Recorde no Game Quiz 🤩</h1>
-            <span id="id_recorde" style="margin: 0; padding: 0; font-size: 32px;">Tantos acertos</span>
-            <br><br><br>
-            <a class="btn" href="editar_perfil.html">Editar informações 📝</a>
+            <span id="id_recorde" style="margin: 0; padding: 0; font-size: 32px"
+              >Ainda não jogou 😢...</span
+            >
+            <br /><br /><br />
+            <!-- <a class="btn" href="editar_perfil.html">Editar informações 📝</a> -->
           </div>
 
           <div class="right_side">
@@ -82,22 +85,26 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
-  document.getElementById('userNameH1').innerHTML = sessionStorage.getItem('NOME_USUARIO')
+  document.getElementById("userNameH1").innerHTML =
+    sessionStorage.getItem("NOME_USUARIO");
   var vetorHistorico = [];
   var vetorLabel = [];
 
- async function getJogador(idUsuario){
+  async function getJogador(idUsuario) {
     const resposta = await fetch(`/usuarios/jogador/${idUsuario}`);
 
-    if(!resposta.ok){
-      console.log('erro na resposta');
-    }else{
-      console.log('resposta ok');
-      const resultado = await resposta.json()
-      document.getElementById('favoritePlayer').innerHTML = resultado[0].jogadorFavorito
+    if (!resposta.ok) {
+      console.log("erro na resposta");
+    } else {
+      console.log("resposta ok");
+      const resultado = await resposta.json();
+      document.getElementById("favoritePlayer").innerHTML =
+        resultado[0].jogadorFavorito;
     }
 
-    fetch(`http://localhost:3333/interacao/trazerLikesDashboard/${sessionStorage.ID_USUARIO}`,{
+    fetch(
+      `http://localhost:3333/interacao/trazerLikesDashboard/${sessionStorage.ID_USUARIO}`,
+      {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -111,7 +118,9 @@
         id_likes_usuario.innerHTML = LikesDoUsuario;
       });
 
-      fetch(`http://localhost:3333/interacao/trazerDeslikesDashboard/${sessionStorage.ID_USUARIO}`,{
+    fetch(
+      `http://localhost:3333/interacao/trazerDeslikesDashboard/${sessionStorage.ID_USUARIO}`,
+      {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -122,13 +131,15 @@
       .then((res) => {
         var DeslikesDoUsuario = res[0].Deslikes;
         // console.log(res[0].Likes)
-        if(DeslikesDoUsuario == undefined) {
-          DeslikesDoUsuario = 0
+        if (DeslikesDoUsuario == undefined) {
+          DeslikesDoUsuario = 0;
         }
         id_deslikes_usuario.innerHTML = DeslikesDoUsuario;
       });
 
-      fetch(`http://localhost:3333/interacao/trazerRecorde/${sessionStorage.ID_USUARIO}`,{
+    fetch(
+      `http://localhost:3333/interacao/trazerRecorde/${sessionStorage.ID_USUARIO}`,
+      {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -138,24 +149,23 @@
       .then((res) => res.json())
       .then((res) => {
         var trazerRecorde = res[0].pontuacao;
-        console.log(res[0].pontuacao)
-        if(trazerRecorde == undefined) {
-          trazerRecorde = 0
+        // console.log(res[0].pontuacao);
+        if (trazerRecorde == undefined) {
+          trazerRecorde = 0;
         }
         id_recorde.innerHTML = `<b>${trazerRecorde} pontos</b>`;
       });
 
-      fetch(`http://localhost:3333/interacao/ranking`,{
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    )
+    fetch(`http://localhost:3333/interacao/ranking`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
       .then((res) => res.json())
       .then((res) => {
         var trazerRecorde = res[0].pontuacao;
-        console.log(res)
+        // console.log(res);
 
         id_rank_1.innerHTML = `🥇 ${res[0].nomeCompleto} - 1º`;
         id_rank_2.innerHTML = `🥈 ${res[1].nomeCompleto} - 2º`;
@@ -164,7 +174,9 @@
         id_rank_5.innerHTML = `${res[4].nomeCompleto} - 5º`;
       });
 
-      fetch(`http://localhost:3333/interacao/historico/${sessionStorage.ID_USUARIO}`,{
+    fetch(
+      `http://localhost:3333/interacao/historico/${sessionStorage.ID_USUARIO}`,
+      {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -173,41 +185,39 @@
     )
       .then((res) => res.json())
       .then((res) => {
-        console.log(res)
+        // console.log(res);
 
-        for(var contador = 0; contador < res.length; contador++) {
-          vetorHistorico.push(res[contador].pontuacao)
-          vetorLabel.push(`${contador + 1}º resultado`)
+        for (var contador = 0; contador < res.length; contador++) {
+          vetorHistorico.push(res[contador].pontuacao);
+          vetorLabel.push(`${contador + 1}º resultado`);
         }
 
-        const ctx = document.getElementById('myChart');
+        const ctx = document.getElementById("myChart");
 
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: vetorLabel,
-      datasets: [{
-        label: 'Pontuações',
-        data: vetorHistorico,
-        borderWidth: 1,
-        borderColor: '#6EE7B7',
-        backgroundColor: '#6EE7B7'
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
-  });
-      });      
- };
+        new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: vetorLabel,
+            datasets: [
+              {
+                label: "Pontuações",
+                data: vetorHistorico,
+                borderWidth: 1,
+                borderColor: "#6EE7B7",
+                backgroundColor: "#6EE7B7",
+              },
+            ],
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+              },
+            },
+          },
+        });
+      });
+  }
 
- 
-
- getJogador(sessionStorage.getItem('ID_USUARIO'))
-
-  
+  getJogador(sessionStorage.getItem("ID_USUARIO"));
 </script>

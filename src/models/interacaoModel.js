@@ -5,19 +5,16 @@ function trocarLike(fkUsuario) {
 }
 
 function trazerLike() {
-    console.log('To dentro da Model com trazer likes >:)')
     var instrucaoSql = `select idManchete as 'id', noticiaLikes as 'Likes' from manchete;`
     return database.executar(instrucaoSql); 
 }
 
 function trazerDeslike() {
-    console.log('To dentro da Model com trazer likes >:)')
     var instrucaoSql = `select idManchete as 'id', noticiaDeslikes as 'Deslikes' from manchete;`
     return database.executar(instrucaoSql); 
 }
 
 function darLike(manchete) {
-    console.log('To dentro da Model com dar likes >:)')
     var instrucaoSql = `
     update manchete
     set noticiaLikes = noticiaLikes + 1
@@ -27,7 +24,6 @@ function darLike(manchete) {
 }
 
 function darDeslike(manchete) {
-    console.log('To dentro da Model com dar deslikes >:)')
     var instrucaoSql = `
     update manchete
     set noticiaDeslikes = noticiaDeslikes + 1
@@ -37,7 +33,6 @@ function darDeslike(manchete) {
 }
 
 function inserirLikeNoBanco(manchete, idUsuario) {
-    console.log('To dentro da Model com dar deslikes >:)')
     var instrucaoSql = `
     insert into interacao values
     (${idUsuario}, ${manchete}, '1')
@@ -45,7 +40,6 @@ function inserirLikeNoBanco(manchete, idUsuario) {
     return database.executar(instrucaoSql); 
 }
 function inserirDeslikeNoBanco(manchete, idUsuario) {
-    console.log('To dentro da Model com dar deslikes >:)')
     var instrucaoSql = `
     insert into interacao values
     (${idUsuario}, ${manchete}, '0')
@@ -54,7 +48,6 @@ function inserirDeslikeNoBanco(manchete, idUsuario) {
 }
 
 function preencherLike(idUsuario) {
-    console.log('To dentro da Model com preencher likes >:)')
     var instrucaoSql = `
     select fkManchete as post, tipo from interacao where fkUsuario = ${idUsuario};
     `
