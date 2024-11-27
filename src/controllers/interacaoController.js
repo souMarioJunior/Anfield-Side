@@ -161,6 +161,20 @@ function ranking(req, res) {
   )
 }
 
+function historico(req, res) {
+  var idUsuario = req.params.idUsuario
+  interacaoModel.historico(idUsuario)
+  .then(
+    function(resultadoAutenticar) {
+      res.status(200).json(resultadoAutenticar)
+    }
+  ) .catch(
+    function(erro) {
+      res.status(500).json(erro.sqlMessage)
+    }
+  )
+}
+
 module.exports = {
   trocarLike,
   trazerLike,
@@ -173,5 +187,6 @@ module.exports = {
   trazerLikesDashboard,
   trazerDeslikesDashboard,
   trazerRecorde,
-  ranking
+  ranking,
+  historico
 };

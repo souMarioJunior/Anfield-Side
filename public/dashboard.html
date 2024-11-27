@@ -83,6 +83,8 @@
 
 <script>
   document.getElementById('userNameH1').innerHTML = sessionStorage.getItem('NOME_USUARIO')
+  var vetorHistorico = [];
+  var vetorLabel = [];
 
  async function getJogador(idUsuario){
     const resposta = await fetch(`/usuarios/jogador/${idUsuario}`);
@@ -161,21 +163,32 @@
         id_rank_4.innerHTML = `${res[3].nomeCompleto} - 4º`;
         id_rank_5.innerHTML = `${res[4].nomeCompleto} - 5º`;
       });
- };
 
- 
+      fetch(`http://localhost:3333/interacao/historico/${sessionStorage.ID_USUARIO}`,{
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res)
 
- getJogador(sessionStorage.getItem('ID_USUARIO'))
+        for(var contador = 0; contador < res.length; contador++) {
+          vetorHistorico.push(res[contador].pontuacao)
+          vetorLabel.push(`${contador + 1}º resultado`)
+        }
 
-  const ctx = document.getElementById('myChart');
+        const ctx = document.getElementById('myChart');
 
   new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      labels: vetorLabel,
       datasets: [{
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
+        label: 'Pontuações',
+        data: vetorHistorico,
         borderWidth: 1,
         borderColor: '#6EE7B7',
         backgroundColor: '#6EE7B7'
@@ -189,4 +202,12 @@
       }
     }
   });
+      });      
+ };
+
+ 
+
+ getJogador(sessionStorage.getItem('ID_USUARIO'))
+
+  
 </script>

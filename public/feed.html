@@ -695,6 +695,8 @@
 </html>
 
 <script>
+  var mostrar_like_1 = document.querySelector("#num_like_1")
+
   var curtida_1 = 0;
   var curtida_2 = 0;
   var curtida_3 = 0;
@@ -726,6 +728,22 @@
   var descurtida_13 = 0;
   var descurtida_14 = 0;
   var descurtida_15 = 0;
+
+  var valor_1 = 0;
+  var valor_2 = 0;
+  var valor_3 = 0;
+  var valor_4 = 0;
+  var valor_5 = 0;
+  var valor_6 = 0;
+  var valor_7 = 0;
+  var valor_8 = 0;
+  var valor_9 = 0;
+  var valor_10 = 0;
+  var valor_11 = 0;
+  var valor_12 = 0;
+  var valor_13 = 0;
+  var valor_14 = 0;
+  var valor_15 = 0;
 
   fetch(
       `http://localhost:3333/interacao/preencherLike/${sessionStorage.ID_USUARIO}`,
@@ -1069,6 +1087,7 @@
   function darLike_3() {
     img_3.src = "assets/ilustracoes_noticias/like_preenchido.png";
     manchete = 3;
+
 
     fetch(`http://localhost:3333/interacao/darLike/${manchete}`, {
       method: "PUT",

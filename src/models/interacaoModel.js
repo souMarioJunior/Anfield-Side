@@ -81,6 +81,11 @@ function ranking(idUsuario) {
     return database.executar(instrucaoSql);
 }
 
+function historico(idUsuario) {
+    var instrucaoSql = `select pontuacao from quiz where fkUsuario = ${idUsuario};`
+    return database.executar(instrucaoSql);
+}
+
 module.exports = {
     trocarLike,
     trazerLike,
@@ -93,5 +98,6 @@ module.exports = {
     trazerLikesDashboard,
     trazerDeslikesDashboard,
     trazerRecorde,
-    ranking
+    ranking,
+    historico
 };
