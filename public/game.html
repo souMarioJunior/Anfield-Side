@@ -35,26 +35,36 @@
 
         <!-- Banner -->
         <div class="banner">
-          <div id="div_resultado" class="fade-in-top" style="display: none;">
-          </div>
-          <div id="box_infos" style="display: flex" class="box_infos fade-in-top">
+          <div
+            id="div_resultado"
+            class="fade-in-top"
+            style="display: none"
+          ></div>
+          <div
+            id="box_infos"
+            style="display: flex"
+            class="box_infos fade-in-top"
+          >
             <div class="saudacao">
               <h1>Saudações,</h1>
               <span id="nome" class="nome">Usuário 👋</span>
             </div>
             <br />
             <span class="desc"
-              >Bora ver o quanto você conhece sobre o Liverpool? 😬 Acerte qual
-              é o jogador pelo número da camisa e o ano em que ela foi usada e
-              suba no rank de conhecimento sobre o Liverpool. Com certeza você
-              estará entre os melhores, não é mesmo? 👀</span
+              >Bora ver o quanto você conhece sobre o Liverpool? 😬 Acerte as
+              perguntas e suba no rank de conhecimento sobre o Liverpool. O quiz
+              possui 100 perguntas e você ganhará 10 pontos a cada acerto e
+              perderá 10 pontos a cada erro. Caso sua pontuação chegue em 0,
+              você não poderá continuar. Com certeza você estará entre os
+              melhores, não é mesmo? 👀</span
             >
             <br /><br />
-            <button class="btn_jogar" onclick="jogar()">Veremos... Desafio aceito! 🔥</button>
+            <button class="btn_jogar" onclick="jogar()">
+              Veremos... Desafio aceito! 🔥
+            </button>
           </div>
 
-
-          <div id="box_jogo" class="box_jogo" style="display: none;">
+          <div id="box_jogo" class="box_jogo" style="display: none">
             <div class="enunciado fade-in-top">
               <h1 id="num_questao" class="num_questao"></h1>
               <div id="pergunta" class="pergunta">
@@ -62,15 +72,31 @@
               </div>
             </div>
             <div id="box_opcoes" class="box_opcoes fade-in-top">
-                <button id="a" class="btns_game btn_opt_1" onclick="escolher('a')"></button>
-                <button id="b" class="btns_game btn_opt_2" onclick="escolher('b')"></button>
-                <button id="c" class="btns_game btn_opt_3" onclick="escolher('c')"></button>
-                <button id="d" class="btns_game btn_opt_4" onclick="escolher('d')"></button>
-              </div>
-              <br><br>
-              <div id="pontuacao"></div>
+              <button
+                id="a"
+                class="btns_game btn_opt_1"
+                onclick="escolher('a')"
+              ></button>
+              <button
+                id="b"
+                class="btns_game btn_opt_2"
+                onclick="escolher('b')"
+              ></button>
+              <button
+                id="c"
+                class="btns_game btn_opt_3"
+                onclick="escolher('c')"
+              ></button>
+              <button
+                id="d"
+                class="btns_game btn_opt_4"
+                onclick="escolher('d')"
+              ></button>
             </div>
+            <br /><br />
+            <div id="pontuacao"></div>
           </div>
+        </div>
       </div>
     </main>
   </body>
@@ -79,5 +105,5 @@
 <script>
   var nomeDoUsuario = document.getElementById("nome");
 
-  nomeDoUsuario.innerHTML = `${sessionStorage.NOME_USUARIO}`
+  nomeDoUsuario.innerHTML = `${sessionStorage.NOME_USUARIO} 👋`;
 </script>
