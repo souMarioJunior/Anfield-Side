@@ -16,7 +16,6 @@
 * [Justificativa ✅](#justificativa-)
 #### Recursos necessários e instalação
 * [Tecnologias necessárias para executar o projeto 💻](#tecnologias-necessárias-para-executar-o-projeto-)
-* [Como instalar 👣](#como-instalar-)
 
 # Contexto do projeto 📖
 
@@ -70,40 +69,6 @@ Entregar até 20/11/2024 um website na máquina local com sistema integrado com 
 - MySQL e MySQL Workbench para o banco de dados do projeto https://dev.mysql.com/downloads/installer/
 - Máquina Virtual https://www.virtualbox.org/wiki/Downloads
 - Imagem do Sistema Operacional para a Máquina Virtual https://drive.google.com/file/d/1Hw8nv5ngHAkj1lFH2tOgupVJRwjkCs75/view
-
-## Como instalar 👣
-
-Clone o projeto na pasta Downloads utilizando o Git Bash
-
-```bash
-  git clone https://github.com/souMarioJunior/Anfield-Side.git
-```
-
-Entre no diretório do projeto
-
-```bash
-  cd /Downloads/Anfield-Side
-```
-
-#### Clonagem - Etapa 01
-https://github.com/user-attachments/assets/3dbeb78c-4f8c-4367-944b-907d63e65134
-
-#### Clonagem - Etapa 02
-https://github.com/user-attachments/assets/fc2a8fe5-a9a2-4b10-96dd-9ad4f9b4efa8
-
-Instale as dependências
-
-```bash
-  npm install
-```
-
-Inicie o servidor
-
-```bash
-  npm run start
-```
-
-
 
 ## Autor
 - [@souMarioJunior](https://www.github.com/souMarioJunior)
